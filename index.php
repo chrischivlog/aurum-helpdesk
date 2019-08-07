@@ -1,16 +1,10 @@
 <?php include './assets/header.php'; ?>
 
+<h1>Huhu, wie können wir dir Helfen? 👋</h1>
+<div class="placeholderUI4"></div>
 
-<div class="text-left-header">
-    <br>
-    <b>Epic-Playing</b> ⎟ <font style="font-weight: 100;">Helpdesk</font>
-    <center>
-        <br><br><br><br>
-        <h1>Wie können wir dir Helfen?</h1>
-        <div class="placeholderUI4"></div>
-
-    </center>
-    <br><br>
+</center>
+<br><br>
 </div>
 </div>
 </div>
@@ -23,66 +17,68 @@
             <a class="a-black" href="<?php echo $url; ?>/#faq">
                 <img src="<?php echo $url; ?>/assets/icons/clip-2.png" width="240px">
                 <h1>FAQ</h1>
-                <font style="font-weight: 100;">Fragen? Wir haben die richtigen antworten.</font>
             </a>
+
+            <font style="font-weight: 100;">Fragen? Wir haben die richtigen antworten.</font>
         </div>
         <div class="box2">
             <a class="a-black" href="<?php echo $url; ?>/sites/join">
                 <img src="<?php echo $url; ?>/assets/icons/clip-message-sent.png" width="240px">
                 <h1>Bewerben</h1>
-                <font style="font-weight: 100;">Für mehr Epic-Playing in deinem Leben!</font>
             </a>
+
+            <font style="font-weight: 100;">Für mehr Epic-Playing in deinem Leben!</font>
 
         </div>
         <div class="box3">
             <a class="a-black" href="<?php echo $url; ?>/sites/unban">
                 <img src="<?php echo $url; ?>/assets/icons/clip-no-comments.png" width="240px">
                 <h1>Entbannen</h1>
-                <font style="font-weight: 100;">Falls du mal wieder misst gebaut hast...</font>
             </a>
+
+            <font style="font-weight: 100;">Falls du mal wieder misst gebaut hast...</font> <br><br><br>
+
         </div>
+</div>
+</div>
+
+</center>
+
+<div class="placeholderUI5"></div><br><br>
+
+
+<div class="text">
+    <center>
+        <div class="only-moblie">
         </div>
-        </div>
+        <h1 id="faq">FAQ</h1>
 
-    </center>
-
-    <div class="placeholderUI5"></div><br><br>
-
-
-    <div class="text">
-        <center>
         <?php
-			$result = mysqli_query($conn, "SELECT * FROM faq_article WHERE category = 'apply' ORDER BY date DESC");
-			while ($row = mysqli_fetch_array($result)) {
-				?>
-				<p>
-					<details>
-						<summary>
-							<b><?php echo $row['title']; ?></b>
-						</summary>
+        $conn = new mysqli($server, $user, $password, $database);
+        mysqli_set_charset($conn, "utf8");
+        $result = mysqli_query($conn, "SELECT * FROM faq_article ORDER BY title DESC");
+        while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <p>
+                <details>
 
-						<div class="sum-word-breakUI">
-							<br>
-							<?php echo $row['details']; ?>
-							</br>
-						</div>
-					</details>
-				<?php
-			}
-			?>
-<br><br>
-<br>
-<br>
-<br>
-<br>
+                    <summary>
+                        <b><?php echo $row['title']; ?></b>
+                    </summary>
 
-    </div>
+                    <div class="sum-word-breakUI">
+                        <br>
+                        <?php echo $row['details']; ?>
+                        </br>
+                    </div>
+                </details>
+            <?php
+            }
+            ?>
 
+</div>
 
+<?php include './assets/footer.php'; ?>
 
 
-
-
-
-
-    </body>
+</body>

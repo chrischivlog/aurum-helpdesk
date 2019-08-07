@@ -8,17 +8,24 @@ $password = "lol";
 $conn = new mysqli($server, $user, $password, $database);
 
 
-$result = mysqli_query($conn, "SELECT * FROM domain_config");
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'domain'");
 while ($row = mysqli_fetch_array($result)) {
 
     $url = $row["domain_path"];
 }
+
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'tidio'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $tidio = $row["domain_path"];
+}
+
 ?>
 
 <html lang="de">
 <!--TITLE FÜR DIE SEITE-->
 
-<title>AHOI!</title>
+<title>Helpdesk - Epic-Playing.de</title>
 
 <head>
     <!--ICON-->
@@ -32,6 +39,11 @@ while ($row = mysqli_fetch_array($result)) {
     <!--STYLE-->
     <link href="<?php echo $url; ?>/assets/style.css" rel="stylesheet">
 
+
+    <!--SCRIPT-->
+    <script src="<?php echo $tidio; ?>" ></script> 
+
+
 </head>
 
 
@@ -39,3 +51,10 @@ while ($row = mysqli_fetch_array($result)) {
 <div class="background">
     
     <div class="contentBox1">
+    <div class="text-left-header">
+    <br>
+    <a href="<?php echo $url; ?>/" style="color: white;"><b>Epic-Playing</b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>
+    <center>
+        <br><br><br><br>
+ 
+
