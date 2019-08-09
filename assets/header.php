@@ -20,6 +20,21 @@ while ($row = mysqli_fetch_array($result)) {
     $tidio = $row["domain_path"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'datenschutz'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $datenschutz = $row["domain_path"];
+}
+
+
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'impressum'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $impressum = $row["domain_path"];
+}
+
+
+
 ?>
 
 <html lang="de">
@@ -42,6 +57,8 @@ while ($row = mysqli_fetch_array($result)) {
 
     <!--SCRIPT-->
     <script src="<?php echo $tidio; ?>" ></script> 
+    <script type="text/javascript" src="<?php echo $url; ?>/assets/jquery.js"></script>
+
 
 
 </head>
