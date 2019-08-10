@@ -124,6 +124,12 @@ h2 {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .only-mobile {
+        content: normal;
+    }
+}
+
 
 /*LINK*/
 

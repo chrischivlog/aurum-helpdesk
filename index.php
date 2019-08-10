@@ -14,6 +14,9 @@
     <center>
         <div class="placeholderUI3"></div>
         <div class="box1 a-black">
+        <div class="only-mobile">
+                <br><br><br>
+                </div>
             <a class="a-black" href="<?php echo $url; ?>/#faq">
                 <img src="<?php echo $url; ?>/assets/icons/clip-2.png" width="240px">
                 <h1>FAQ</h1>
@@ -22,6 +25,9 @@
             <font style="font-weight: 100;">Fragen? Wir haben die richtigen antworten.</font>
         </div>
         <div class="box2">
+        <div class="only-mobile">
+                <br><br><br>
+                </div>
             <a class="a-black" href="<?php echo $url; ?>/sites/join">
                 <img src="<?php echo $url; ?>/assets/icons/clip-message-sent.png" width="240px">
                 <h1>Bewerben</h1>
@@ -31,6 +37,9 @@
 
         </div>
         <div class="box3">
+        <div class="only-mobile">
+                <br><br><br>
+                </div>
             <a class="a-black" href="<?php echo $url; ?>/sites/unban">
                 <img src="<?php echo $url; ?>/assets/icons/clip-no-comments.png" width="240px">
                 <h1>Entbannen</h1>

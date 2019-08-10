@@ -58,6 +58,7 @@ while ($row = mysqli_fetch_array($result)) {
     <!--SCRIPT-->
     <script src="<?php echo $tidio; ?>" ></script> 
     <script type="text/javascript" src="<?php echo $url; ?>/assets/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo $url; ?>/assets/scroll.js"></script>
 
 
 

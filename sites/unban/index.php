@@ -18,6 +18,9 @@
                 <div class="tag-back">
                     ❮ Hauptseite
                 </div>
+                <div class="only-mobile">
+                <br><br><br>
+                </div>
             </a>
         </div>
 

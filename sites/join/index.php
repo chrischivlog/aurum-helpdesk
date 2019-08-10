@@ -1,6 +1,6 @@
 <?php include '../../assets/header.php'; ?>
 
-<h1>Bewerben</h1>
+<h1>Bewerben 🤝</h1>
 <div class="placeholderUI4"></div>
 
 </center>
@@ -36,7 +36,7 @@
         <?php
         $conn = new mysqli($server, $user, $password, $database);
         mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'supporter' ORDER BY description DESC");
+        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'supporter' ");
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <!--DATABASE CONNECTION BANN REASONS END-->
@@ -64,7 +64,7 @@
         <?php
         $conn = new mysqli($server, $user, $password, $database);
         mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'supporter' ORDER BY description DESC");
+        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'partner' ORDER BY description DESC");
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <!--DATABASE CONNECTION BANN REASONS END-->
