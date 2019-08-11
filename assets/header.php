@@ -33,6 +33,11 @@ while ($row = mysqli_fetch_array($result)) {
     $impressum = $row["domain_path"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM google_config WHERE description = 'data-sitekey'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $google_sitekey = $row["token"];
+}
 
 
 ?>
@@ -59,6 +64,8 @@ while ($row = mysqli_fetch_array($result)) {
     <script src="<?php echo $tidio; ?>" ></script> 
     <script type="text/javascript" src="<?php echo $url; ?>/assets/jquery.js"></script>
     <script type="text/javascript" src="<?php echo $url; ?>/assets/scroll.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 
 

@@ -18,18 +18,18 @@
                 <br><br><br>
                 </div>
             <a class="a-black" href="<?php echo $url; ?>/#faq">
-                <img src="<?php echo $url; ?>/assets/icons/clip-2.png" width="240px">
+                <img class="brh1" src="<?php echo $url; ?>/assets/icons/clip-2.png" width="240px"></img>
                 <h1>FAQ</h1>
             </a>
 
-            <font style="font-weight: 100;">Fragen? Wir haben die richtigen antworten.</font>
+            <font style="font-weight: 100;">Fragen? Wir haben die richtigen Antworten.</font>
         </div>
         <div class="box2">
         <div class="only-mobile">
                 <br><br><br>
                 </div>
             <a class="a-black" href="<?php echo $url; ?>/sites/join">
-                <img src="<?php echo $url; ?>/assets/icons/clip-message-sent.png" width="240px">
+                <img class="brh1" src="<?php echo $url; ?>/assets/icons/clip-message-sent.png" width="240px">
                 <h1>Bewerben</h1>
             </a>
 
@@ -41,11 +41,11 @@
                 <br><br><br>
                 </div>
             <a class="a-black" href="<?php echo $url; ?>/sites/unban">
-                <img src="<?php echo $url; ?>/assets/icons/clip-no-comments.png" width="240px">
+                <img class="brh1" src="<?php echo $url; ?>/assets/icons/clip-no-comments.png" width="240px">
                 <h1>Entbannen</h1>
             </a>
 
-            <font style="font-weight: 100;">Falls du mal wieder misst gebaut hast...</font> <br><br><br>
+            <font style="font-weight: 100;">Falls du mal wieder misst gebaut hast…</font> <br><br><br>
 
         </div>
 </div>

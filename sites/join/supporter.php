@@ -1,6 +1,6 @@
 <?php include '../../assets/header.php'; ?>
 
-<h1>Entbannungsantrag</h1>
+<h1>Bewerben: Supporter</h1>
 <div class="placeholderUI4"></div>
 
 </center>
@@ -19,14 +19,14 @@
                     ❮ Hauptseite
                 </div>
                 <div class="only-mobile">
-                <br><br><br>
+                    <br><br><br>
                 </div>
             </a>
         </div>
 
         <div class="box2">
             <form action="sendmail_unban.php" method="post">
-                <b style="float: left;">Unter welchem namen wurdest du Gebannt?</b>
+                <b style="float: left;">Dein Name:</b>
                 <input type="text" name="user_name" required=""></input>
                 <br>
                 <br>
@@ -58,33 +58,21 @@
                 </select>
                 <br>
                 <br>
-                <b style="float: left;">Wann wurdest du Gebannt?</b>
-                <input type="text" name="date" value="<?php echo date("d.m.Y"); ?>" placeholder="dd.mm.jjjj hh:mm" required>    
-                <br>
-                <br>
                 <b style="float: left;">Deine Entschuldigung/Richtigstellung</b>
                 <textarea type="text" rows="6" name="desc" required=""></textarea>
                 <br>
                 <br>
                 <b style="float: left;">Bitte gib eine Email Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required=""></input>
+                <input type="mail" name="reason" required=""></input>
                 <br><br>
                 <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
                 <br><br>
 
-<div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>
-<br><br>
-<script>
-                    $("form").submit(function(event) {
+                <div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>
+                <br><br>
 
-                        var recaptcha = $("#g-recaptcha-response").val();
-                        if (recaptcha === "") {
-                            event.preventDefault();
-                            alert("Bitte löse das Recaptcha!");
-                        }
-                    });
-                </script>
+
                 <button name="submit" class="tag-back" type="submit">
                     Absenden
                 </button>

@@ -9,7 +9,7 @@
         <a href="" style="color:white;">AGB </a>
         <br>
     <br>
-    Mit ❤️ Entwickelt von @Blöckchengamer für Epic-Playing.de 
+    aurum Helpdesk Entwickelt von @Blöckchengamer für Epic-Playing.de 
 
     </center>
 </div>

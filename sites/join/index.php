@@ -14,12 +14,12 @@
 <div class="text">
     <div class="box1">
         <center>
-    <a href="<?php echo $url; ?>" style="color: white; ">
+            <a href="<?php echo $url; ?>" style="color: white; ">
                 <div class="tag-back">
                     ❮ Hauptseite
                 </div>
-</a>
-</center>        
+            </a>
+        </center>
     </div>
 
     <!---SUPPORTER TEIL--->
@@ -43,12 +43,27 @@
             <li><?php echo $row['description']; ?></li>
         <?php
         }
+        mysqli_set_charset($conn, "utf8");
+        $result = mysqli_query($conn, "SELECT * FROM jobs_online WHERE description = 'supporter'");
+
+        while ($row = mysqli_fetch_array($result)) {
+            if ($row['online'] == '1') {
+                ?>
+                <br>
+                <a href="supporter.php" class="btn btn-primary">
+                    Jetzt Bewerben
+                </a>
+            <?php
+            } else {
+                ?>
+                <br>
+                    <b>Aktuell kannst du dich nicht für den Supporter  Bewerben.</b>
+            <?php
+            }
+        }
         ?>
-        <br>
-        <a href="supporter.php" class="btn btn-primary">
-           Jetzt Bewerben
-        </a>
-    
+
+
         <div class="placeholderUI3"></div>
 
 
@@ -74,14 +89,14 @@
         ?>
         <br>
         <a href="partner.php" class="btn btn-primary">
-           Jetzt Anfragen
+            Jetzt Anfragen
         </a>
         <br>
         <div class="placeholderUI4"></div>
 
     </div>
     <div class="box3"></div>
-    
+
 </div>
 
 </div>
