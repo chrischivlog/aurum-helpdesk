@@ -6,7 +6,10 @@ $user = "test_5";
 $database = "test_5";
 $password = "lol";
 $conn = new mysqli($server, $user, $password, $database);
+?>
+<!--DATENBANK VERBINDUNG ENDE-->
 
+<?php
 
 $result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'domain'");
 while ($row = mysqli_fetch_array($result)) {
@@ -39,6 +42,23 @@ while ($row = mysqli_fetch_array($result)) {
     $google_sitekey = $row["token"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM google_config WHERE description = 'secretkey'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $secretkey = $row["token"];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE category = 'support-adress'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $Empfaenger = $row["description"];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE category = 'mail-versendet'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $mail_text = $row["description"];
+}
 
 ?>
 

@@ -26,48 +26,36 @@
 
         <div class="box2">
             <form action="sendmail_unban.php" method="post">
-                <b style="float: left;">Dein Name:</b>
+                <b style="float: left;">Dein Name</b>
                 <input type="text" name="user_name" required=""></input>
                 <br>
                 <br>
-                <b style="float: left;">Mit welchem Grund wurdest du ausgeschlossen?</b>
-                <input type="text" name="reason" required=""></input>
+                <b style="float: left;">Gib bitte dein Alter an</b>
+                <input type="text" name="old" required=""></input>
+                <br>
+                <br>              
+                <b style="float: left;">Stell dich kurz vor</b>
+                <textarea type="text" rows="6" name="request1" required=""></textarea>
                 <br>
                 <br>
-
-                <b style="float: left;">Wo wurdest du Gebannt?</b>
-                <select type="text" name="location" required="">
-                    <optgroup label="Wähle:">
-                        <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
-
-                        <?php
-                        $conn = new mysqli($server, $user, $password, $database);
-                        mysqli_set_charset($conn, "utf8");
-                        $result = mysqli_query($conn, "SELECT * FROM bann_location ORDER BY location DESC");
-                        while ($row = mysqli_fetch_array($result)) {
-                            ?>
-                            <!--DATABASE CONNECTION BANN REASONS END-->
-
-
-
-                            <option><b><?php echo $row['location']; ?></b></option>
-                        <?php
-                        }
-                        ?>
-                    </optgroup>
-                </select>
+                <b style="float: left;">Warum willst du dich bei epic-playing bewerben?</b>
+                <textarea type="text" rows="6" name="request2" required=""></textarea>
                 <br>
                 <br>
-                <b style="float: left;">Deine Entschuldigung/Richtigstellung</b>
-                <textarea type="text" rows="6" name="desc" required=""></textarea>
+                <b style="float: left;">Hast du schon erfahrung im Support bereich?</b>
+                <textarea type="text" rows="6" name="request3" required=""></textarea>
                 <br>
                 <br>
+                <b style="float: left;">Bitte nenne mindestens drei Sträken und Schwächen</b>
+                <textarea type="text" rows="6" name="request3" required=""></textarea>
+                <br>
+                <br>                                                    
                 <b style="float: left;">Bitte gib eine Email Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
                 <input type="mail" name="reason" required=""></input>
                 <br><br>
-                <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
-                <br><br>
+                <input type="checkbox" name="datenschtz" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
+                <br><br>                
 
                 <div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>
                 <br><br>
