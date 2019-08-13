@@ -5,8 +5,8 @@ $Empfaenger2 = $_GET['email'];
 $pin = $_GET['pin'];
 
 
-  $absendername = "help.aurum@epic-playing.de";
-  $absendermail = "help.aurum@epic-playing.de";
+$absendername = "helpdesk@epic-playing.de";
+$absendermail = "helpdesk@epic-playing.de";
   $Mailnachricht = nl2br("
 
 <html>
