@@ -46,59 +46,59 @@ $pin = generatePIN(6);
   mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
 
 ?>
-  <h1>Dein Anliegen #<?php echo $pin;?> übermittelt</h1>
-  <div class="placeholderUI4"></div>
-  
-  </center>
-  <br><br>
-  </div>
-  </div>
-  </div>
-  <br>
-  
-  
-  <div class="text">
-      <center>
-      <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" width="400px"><br>
-      Dein Anliegen wurde übermittelt. 
-      <br>
-      <br>
+<h1>Es wird hart Gearbeitet...</h1>
+<div class="placeholderUI4"></div>
 
-      <b>Du wirst in 10 Sekunden zur Startseite zurück geschickt...</b>  
-        <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
-        <div class="placeholderUI4"></div>
- 
+</center>
+<br><br>
+</div>
+</div>
+</div>
+<br>
 
-      </center>
-  </div>
-<?php
-} else {
-  
-  ?>
-  <h1>Da ist was Falsch gelaufen...</h1>
-  <div class="placeholderUI4"></div>
-  
-  </center>
-  <br><br>
-  </div>
-  </div>
-  </div>
-  <br>
-  
-  
-  <div class="text">
-      <center>
-      <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" width="400px"><br>
-      Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder Felder leer gelassen.
-      <br>
-      <br>
 
-      <b>Du wirst in 10 Sekunden zur Startseite zurück geschickt...</b>  
-        <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
-      </center>
+<div class="text">
+    <center>
+    <img src="<?php echo $url; ?>/assets/img/loader.gif" width="400px"><br>
+    Bitte habe ein Moment gedult!
+    <br>
+
       <div class="placeholderUI4"></div>
-  </div>
-  <?php  
+
+
+    </center>
+</div>
+<meta http-equiv="refresh" content="3; URL=../../sites/mail_service/sendmail_user.php?email=<?php echo $_REQUEST['mail']; ?>&pin=<?php echo $pin;  ?>">
+
+<?php
+
+} else {
+
+?>
+<h1>Da ist was Falsch gelaufen...</h1>
+<div class="placeholderUI4"></div>
+
+</center>
+<br><br>
+</div>
+</div>
+</div>
+<br>
+
+
+<div class="text">
+    <center>
+    <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" width="400px"><br>
+    Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder Felder leer gelassen.
+    <br>
+    <br>
+
+    <b>Du wirst in 10 Sekunden zur Startseite zurück geschickt...</b>  
+      <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
+    </center>
+    <div class="placeholderUI4"></div>
+</div>
+<?php  
 
 }
 

@@ -1,4 +1,4 @@
-<?php include '../../assets/header.php'; ?>
+<?php include '../../../assets/header.php'; ?>
 
 <h1>Bewerben: Partner</h1>
 <div class="placeholderUI4"></div>
@@ -30,7 +30,7 @@
                 <input type="text" name="user_name" required=""></input>
                 <br>
                 <br>
-                <b style="float: left;">Anzahl deiner Abonnenten auf Twitch/Youtube</b>
+                <b style="float: left;">Anzahl deiner Abonnenten auf Twitch/YouTube</b>
                 <input type="text" name="subs_count" required=""></input>
                 <br>
                 <br>
@@ -54,11 +54,11 @@
                 <input type="text" name="old" required=""></input>
                 <br>
                 <br>                                                         
-                <b style="float: left;">Bitte gib eine Email Adresse an!</b><br>
+                <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
                 <input type="mail" name="mail" required=""></input>
                 <br><br>
-                <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
+                <input type="checkbox" name="datenschtz" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert.</input>
                 <br><br>
                 <div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>
 <br><br>
@@ -86,5 +86,5 @@
 
 </center>
 
-<?php include '../../assets/footer.php'; ?>
+<?php include '../../../assets/footer.php'; ?>
 </body>

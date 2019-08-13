@@ -36,6 +36,12 @@ while ($row = mysqli_fetch_array($result)) {
     $impressum = $row["domain_path"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'agb'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $agb = $row["domain_path"];
+}
+
 $result = mysqli_query($conn, "SELECT * FROM google_config WHERE description = 'data-sitekey'");
 while ($row = mysqli_fetch_array($result)) {
 

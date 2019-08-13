@@ -26,7 +26,7 @@
 
         <div class="box2">
             <form action="sendmail_unban.php" method="post">
-                <b style="float: left;">Unter welchem namen wurdest du Gebannt?</b>
+                <b style="float: left;">Unter welchem Namen wurdest du gebannt?</b>
                 <input type="text" name="user_name" required=""></input>
                 <br>
                 <br>
@@ -35,7 +35,7 @@
                 <br>
                 <br>
 
-                <b style="float: left;">Wo wurdest du Gebannt?</b>
+                <b style="float: left;">Wo wurdest du gebannt?</b>
                 <select type="text" name="location" required="">
                     <optgroup label="Wähle:">
                         <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
@@ -58,7 +58,7 @@
                 </select>
                 <br>
                 <br>
-                <b style="float: left;">Wann wurdest du Gebannt?</b>
+                <b style="float: left;">Wann wurdest du gebannt?</b>
                 <input type="text" name="date" value="<?php echo date("d.m.Y"); ?>" placeholder="dd.mm.jjjj hh:mm" required>    
                 <br>
                 <br>
@@ -66,11 +66,11 @@
                 <textarea type="text" rows="6" name="desc" required=""></textarea>
                 <br>
                 <br>
-                <b style="float: left;">Bitte gib eine Email Adresse an!</b><br>
+                <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
                 <input type="mail" name="mail" required=""></input>
                 <br><br>
-                <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
+                <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert.</input>
                 <br><br>
 
 <div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>

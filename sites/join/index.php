@@ -50,7 +50,7 @@
             if ($row['online'] == '1') {
                 ?>
                 <br>
-                <a href="supporter.php" class="btn btn-primary">
+                <a href="supporter" class="btn btn-primary">
                     Jetzt Bewerben
                 </a>
             <?php
@@ -88,7 +88,7 @@
         }
         ?>
         <br>
-        <a href="partner.php" class="btn btn-primary">
+        <a href="partner" class="btn btn-primary">
             Jetzt Anfragen
         </a>
         <br>

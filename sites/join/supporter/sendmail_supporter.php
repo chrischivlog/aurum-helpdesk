@@ -1,6 +1,6 @@
 <?php
-include('../../assets/header.php');
-include('../../assets/recaptcha.php');
+include('../../../assets/header.php');
+include('../../../assets/recaptcha.php');
 if ($antwortDaten->success) {
 
   
@@ -21,20 +21,22 @@ $pin = generatePIN(6);
   $Mailnachricht = nl2br("
 
 <html>
-                <h1>Bewerbung als Partner</h1>
+                <h1>Bewerbung als Supporter</h1>
                 Mail: " . $_REQUEST['mail'] . "
                 <br>
                 Name des Nutzers: <br>" . $_REQUEST['user_name'] . "
                 <br>
-                Link zum Kanal: <br>" . $_REQUEST['channel_link'] . "
+                Alter: <br>" . $_REQUEST['old'] . "
                 <br>
-                Warum willst du Partner werden? <br>" . $_REQUEST['request1'] . "  			
+                Stell dich kurz vor: <br>" . $_REQUEST['request1'] . "  			
                 <br>  	      		    
-                Welchen Content erstellst du?<br>" . $_REQUEST['request2'] . "
+                Warum willst du dich bei epic-playing bewerben?<br>" . $_REQUEST['request2'] . "
                 <br>
-                Warum wir?<br>" . $_REQUEST['request3'] . "
+                Hast du schon erfahrung im Support bereich?<br>" . $_REQUEST['request3'] . "
                 <br>
-                Gib bitte dein Alter an<br>" . Empfaenger2 . "
+                Bitte nenne mindestens drei Sträken und Schwächen: <br>" . $_REQUEST['request3'] . "
+                <br>                
+                Gib bitte dein Alter an<br>" . $_REQUEST['old'] . "
                 <br>                
                 <br>	                						
 </html>
@@ -48,8 +50,7 @@ $pin = generatePIN(6);
   mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
 
 ?>
-
-  <h1>Dein Anliegen #<?php echo $pin;?> übermittelt</h1>
+  <h1>Es wird hart gearbeitet...</h1>
   <div class="placeholderUI4"></div>
   
   </center>
@@ -62,19 +63,19 @@ $pin = generatePIN(6);
   
   <div class="text">
       <center>
-      <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" width="400px"><br>
-      Dein Anliegen wurde übermittelt. 
-      <br>
+      <img src="<?php echo $url; ?>/assets/img/loader.gif" width="400px"><br>
+      Bitte habe ein Moment gedult!
       <br>
 
-      <b>Du wirst in 10 Sekunden zur Startseite zurück geschickt...</b>  
-        <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
         <div class="placeholderUI4"></div>
  
 
       </center>
   </div>
+<meta http-equiv="refresh" content="3; URL=../../mail_service/sendmail_user.php?email=<?php echo $_REQUEST['mail']; ?>&pin=<?php echo $pin;  ?>">
+
 <?php
+
 } else {
   
   ?>
@@ -108,4 +109,4 @@ $pin = generatePIN(6);
 
 ?>
 
-<?php include '../../assets/footer.php'; ?>
+<?php include '../../../assets/footer.php'; ?>

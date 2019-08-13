@@ -1,4 +1,4 @@
-<?php include '../../assets/header.php'; ?>
+<?php include '../../../assets/header.php'; ?>
 
 <h1>Bewerben: Supporter</h1>
 <div class="placeholderUI4"></div>
@@ -25,7 +25,7 @@
         </div>
 
         <div class="box2">
-            <form action="sendmail_unban.php" method="post">
+            <form action="sendmail_supporter.php" method="post">
                 <b style="float: left;">Dein Name</b>
                 <input type="text" name="user_name" required=""></input>
                 <br>
@@ -42,19 +42,19 @@
                 <textarea type="text" rows="6" name="request2" required=""></textarea>
                 <br>
                 <br>
-                <b style="float: left;">Hast du schon erfahrung im Support bereich?</b>
+                <b style="float: left;">Hast du schon Erfahrung im Support bereich?</b>
                 <textarea type="text" rows="6" name="request3" required=""></textarea>
                 <br>
                 <br>
                 <b style="float: left;">Bitte nenne mindestens drei Sträken und Schwächen</b>
-                <textarea type="text" rows="6" name="request3" required=""></textarea>
+                <textarea type="text" rows="6" name="request4" required=""></textarea>
                 <br>
                 <br>                                                    
-                <b style="float: left;">Bitte gib eine Email Adresse an!</b><br>
+                <b style="float: left;">Bitte gib eine E-mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="reason" required=""></input>
+                <input type="mail" name="mail" required=""></input>
                 <br><br>
-                <input type="checkbox" name="datenschtz" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutz bestimmungen</a> gelesen und akzeptiert.</input>
+                <input type="checkbox" name="datenschtz" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert.</input>
                 <br><br>                
 
                 <div class="g-recaptcha" data-sitekey="<?php echo $google_sitekey; ?>"></div>
@@ -75,5 +75,5 @@
 
 </center>
 
-<?php include '../../assets/footer.php'; ?>
+<?php include '../../../assets/footer.php'; ?>
 </body>
