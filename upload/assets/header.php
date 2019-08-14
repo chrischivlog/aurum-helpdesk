@@ -1,5 +1,22 @@
+<!---
+ * @package aurum v1.0
+ * @website http://www.infinityheroes.de
+ * @author Christopher Oneisz
+ * @Icons icons8.de
+ * @since 1.0.2
+ --->
+
 <!--DATENBANK VERBINDUNG-->
 <?php
+
+/**
+ * @package aurum v1.0
+ * @website http://www.infinityheroes.de
+ * @author Christopher Oneisz
+ * @Icons icons8.de
+ * @since 1.0.2
+ */
+
 
 $server = "localhost";
 $user = "test_5";
