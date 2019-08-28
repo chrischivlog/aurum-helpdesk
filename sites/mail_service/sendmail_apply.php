@@ -3,7 +3,7 @@ include('../../assets/header.php');
 
 $Empfaenger2 = $_GET['email'];
 $pin = $_GET['pin'];
-$user = $_GET['user'];
+$user = $_GET['user']; 
 
 
 
@@ -12,12 +12,12 @@ $absendermail = "helpdesk@epic-playing.de";
   $Mailnachricht = nl2br("
 
 <html>
-         Hallo " . $_REQUEST['user'] . " vielen dank für deine Bewerbung. 
+         Hallo $user Vielen Dank für deine Bewerbung. 
          <br>
          <br>
-         Bitte akzeptiere nun noch die Regeln für Epic-Playing.de.
+         Bitte akzeptiere nun die Regeln für Epic-Playing.de. Klicke dazu auf den unten stehenden Link!
          
-         <a href='http://localhost/epic-playing-support-hub//sites/accept_rules/?user=" . $_REQUEST['user'] . "'>Klicke Hier</a>
+         $url/sites/accept_rules/?user=$user
 	
 </html>
 ");
@@ -53,7 +53,9 @@ $absendermail = "helpdesk@epic-playing.de";
         <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
         <div class="placeholderUI4"></div>
  
+<meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
 
+		  
       </center>
   </div>
 <?php include '../../assets/footer.php'; ?>

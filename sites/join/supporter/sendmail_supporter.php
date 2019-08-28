@@ -46,7 +46,7 @@ $absendermail = "helpdesk@epic-playing.de";
   $header[] = 'Content-type: text/html; charset=UTF-8';
   $header[] = "From: $absendername <$absendermail>";
 
-  $Mailbetreff = "Support case #" . $pin.  "- von " . $_REQUEST['user_name'] . "";
+  $Mailbetreff = "Support case #" . $pin.  "- von " .$_REQUEST['user_name']. " Bewerbung ";
   mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
 
 ?>
@@ -74,6 +74,7 @@ $absendermail = "helpdesk@epic-playing.de";
   </div>
 <meta http-equiv="refresh" content="3; URL=../../mail_service/sendmail_apply.php?email=<?php echo $_REQUEST['mail']; ?>&pin=<?php echo $pin;  ?>&user=<?php echo $_REQUEST['user_name'];  ?>">
 
+
 <?php
 
 } else {
@@ -93,7 +94,7 @@ $absendermail = "helpdesk@epic-playing.de";
   <div class="text">
       <center>
       <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" width="400px"><br>
-      Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder Felder leer gelassen.
+      Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder Felder leer gelassen...
       <br>
       <br>
 
