@@ -19,9 +19,9 @@
 
 
 $server = "localhost";
-$user = "test_5";
+$user = "root";
 $database = "test_5";
-$password = "lol";
+$password = "";
 $conn = new mysqli($server, $user, $password, $database);
 ?>
 <!--DATENBANK VERBINDUNG ENDE-->

@@ -59,7 +59,9 @@
 <div class="text">
     <center>
         <div class="only-moblie">
-        </div>
+        </div>        <br>
+        <br>
+        
         <h1 id="faq">FAQ</h1>
 
         <?php
