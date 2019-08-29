@@ -94,7 +94,7 @@ $absendermail = "helpdesk@epic-playing.de";
   <div class="text">
       <center>
       <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" width="400px"><br>
-      Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder Felder leer gelassen...
+      Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder du hast Felder leer gelassen...
       <br>
       <br>
 

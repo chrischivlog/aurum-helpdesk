@@ -17,12 +17,12 @@
         <div class="only-mobile">
                 <br><br><br>
                 </div>
-            <a class="a-black" href="<?php echo $url; ?>/#faq">
+            <a class="a-black" href="<?php echo $url; ?>/sites/bugreport">
                 <img class="brh1" src="<?php echo $url; ?>/assets/icons/clip-2.png" width="240px"></img>
-                <h1>FAQ</h1>
+                <h1>Fehler Melden</h1>
             </a>
 
-            <font style="font-weight: 100;">Fragen? Wir haben die richtigen Antworten.</font>
+            <font style="font-weight: 100;">Auch wir sind nicht Perfekt, deshalb kannst du hier Fehler Melden.</font>
         </div>
         <div class="box2">
         <div class="only-mobile">

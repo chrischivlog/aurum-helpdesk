@@ -1,6 +1,6 @@
 <?php
-include('../../../assets/header.php');
-include('../../../assets/recaptcha.php');
+include('../../assets/header.php');
+include('../../assets/recaptcha.php');
 if ($antwortDaten->success) {
 
   
@@ -21,20 +21,16 @@ $pin = generatePIN(6);
   $Mailnachricht = nl2br("
 
 <html>
-                <h1>Bewerbung als Partner</h1>
+                <h1>Fehler Meldung</h1>
                 Mail: " . $_REQUEST['mail'] . "
                 <br>
                 Name des Nutzers: <br>" . $_REQUEST['user_name'] . "
                 <br>
-                Link zum Kanal: <br>" . $_REQUEST['channel_link'] . "
-                <br>
                 Warum willst du Partner werden? <br>" . $_REQUEST['request1'] . "  			
                 <br>  	      		    
-                Welchen Content erstellst du?<br>" . $_REQUEST['request2'] . "
+                Welchen Content erstellst du?<br>" . $_REQUEST['bug_type'] . "
                 <br>
-                Warum wir?<br>" . $_REQUEST['request3'] . "
-                <br>
-                Gib bitte dein Alter an<br>" . $_REQUEST['old'] . "
+                Link zu ggf. Bilder und Videos (wenn leer, keine angegeben) <br>" . $_REQUEST['link'] . "
                 <br>                
                 <br>	                						
 </html>
@@ -70,7 +66,7 @@ $pin = generatePIN(6);
 
       </center>
   </div>
-  <meta http-equiv="refresh" content="3; URL=../../mail_service/sendmail_apply.php?email=<?php echo $_REQUEST['mail']; ?>&pin=<?php echo $pin;  ?>&user=<?php echo $_REQUEST['user_name'];  ?>">
+  <meta http-equiv="refresh" content="3; URL=../mail_service/sendmail_user.php?email=<?php echo $_REQUEST['mail']; ?>&pin=<?php echo $pin;  ?>">
 
 <?php
 
@@ -107,4 +103,4 @@ $pin = generatePIN(6);
 
 ?>
 
-<?php include '../../../assets/footer.php'; ?>
+<?php include '../../assets/footer.php'; ?>
