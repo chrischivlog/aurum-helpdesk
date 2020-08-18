@@ -7,7 +7,7 @@
         <a href="<?php echo $agb; ?>" style="color:white;">AGB </a>
         <br>
     <br>
-    aurum Helpdesk für Epic-Playing.de 
+    aurum infinity 2.0, Helpdesk
 
     </center>
 </div>

@@ -33,7 +33,7 @@
                 <h1>Bewerben</h1>
             </a>
 
-            <font style="font-weight: 100;">Für mehr Epic-Playing in deinem Leben!</font>
+            <font style="font-weight: 100;">Für mehr <?php echo $site_name; ?> in deinem Leben!</font>
 
         </div>
         <div class="box3">
@@ -54,8 +54,6 @@
 </center>
 
 <div class="placeholderUI5"></div><br><br>
-
-
 <div class="text">
     <center>
         <div class="only-moblie">

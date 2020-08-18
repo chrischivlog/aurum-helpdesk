@@ -20,7 +20,7 @@
 
 $server = "localhost";
 $user = "root";
-$database = "test_5";
+$database = "test";
 $password = "";
 $conn = new mysqli($server, $user, $password, $database);
 ?>
@@ -83,12 +83,24 @@ while ($row = mysqli_fetch_array($result)) {
     $mail_text = $row["description"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE category = 'support-adress'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $mail_adress = $row["description"];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '1'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $site_name = $row["info"];
+}
+
 ?>
 
 <html lang="de">
 <!--TITLE FÜR DIE SEITE-->
 
-<title>Helpdesk - Epic-Playing.de</title>
+<title>Helpdesk - <?php echo $site_name; ?></title>
 
 <head>
     <!--ICON-->
@@ -114,6 +126,15 @@ while ($row = mysqli_fetch_array($result)) {
 
 </head>
 
+<style>
+.background {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.discordapp.net/attachments/597066766903934997/745285695194529974/image1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+</style>
 
 <body>
 <div class="background">
@@ -121,7 +142,7 @@ while ($row = mysqli_fetch_array($result)) {
     <div class="contentBox1">
     <div class="text-left-header">
     <br>
-    <a href="<?php echo $url; ?>/" style="color: white;"><b>Epic-Playing</b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>
+    <a href="<?php echo $url; ?>/" style="color: white;"><b><?php echo $site_name; ?></b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>
     <center>
         <br><br><br><br>
  
