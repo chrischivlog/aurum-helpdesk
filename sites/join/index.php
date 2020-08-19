@@ -40,7 +40,8 @@
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <!--DATABASE CONNECTION BANN REASONS END-->
-            <li><?php echo $row['description']; ?></li>
+            <?php echo $row['description']; ?>
+            <br>
         <?php
         }
         mysqli_set_charset($conn, "utf8");
@@ -83,7 +84,8 @@
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <!--DATABASE CONNECTION BANN REASONS END-->
-            <li><?php echo $row['description']; ?></li>
+            <?php echo $row['description']; ?>
+            <br>
         <?php
         }
         ?>

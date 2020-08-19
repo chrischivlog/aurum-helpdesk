@@ -9,7 +9,7 @@
         <a href="<?php echo $agb; ?>" style="color:white;">AGB </a>
         <br>
     <br>
-    aurum infinity 2.0, Helpdesk
+    aurum infinity 2.0 Helpdesk
 
     </center>
 </div>

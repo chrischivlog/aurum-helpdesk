@@ -125,10 +125,7 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 </head>
-<div class="cookie-banner">
-    Wir nutzen Cookies ok? <a href="?cookies=1"><button class="tag-start">Ok!</button></a>
-</div>  
-
+<?php include ('cookiebanner.php');?>
 <style>
 .background {
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.discordapp.net/attachments/597066766903934997/745285695194529974/image1.jpg') no-repeat center center fixed;
@@ -143,11 +140,12 @@ while ($row = mysqli_fetch_array($result)) {
 <div class="background">
 
     <div class="contentBox1">
-    <br><br><br>
+    
 
     <div class="text-left-header">
-    <br>
-    <a href="<?php echo $url; ?>/" style="color: white;"><b><?php echo $site_name; ?></b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>
+    <br><br>
+
+    <a href="<?php echo $url; ?>" style="color: white;"><b><?php echo $site_name; ?></b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>
     <center>
         <br><br><br><br>
  

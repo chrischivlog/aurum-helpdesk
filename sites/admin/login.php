@@ -34,6 +34,13 @@
                 </a>
                 <br>
                 <br>
+                <a href="?apply">
+                <button name="submit" class="tag-back" type="submit">
+                    Bewerbungphase Verwalten
+                </button>
+                </a>
+                <br>
+                <br>
                 <button name="submit" class="tag-logout" type="submit">
                     Abmelden!
                 </button>       
@@ -50,6 +57,12 @@
             include 'add_faq.php';
         } elseif(isset($_GET['edit_faq'])){
             include 'edit_faq.php';
+        } elseif(isset($_GET['apply'])){
+            include 'apply.php';
+        } elseif(isset($_GET['apply_supporter'])){
+            include 'edit_apply-sup.php';
+        } elseif(isset($_GET['apply_partner'])){
+            include 'edit_apply-partner.php';
         } else {
             include 'start.php';
         }
