@@ -46,6 +46,10 @@
             include 'faq.php';
         } elseif(isset($_GET['settings'])){
             include 'settings.php';
+        } elseif(isset($_GET['add_faq'])){
+            include 'add_faq.php';
+        } elseif(isset($_GET['edit_faq'])){
+            include 'edit_faq.php';
         } else {
             include 'start.php';
         }

@@ -125,6 +125,9 @@ while ($row = mysqli_fetch_array($result)) {
 
 
 </head>
+<div class="cookie-banner">
+    Wir nutzen Cookies ok? <a href="?cookies=1"><button class="tag-start">Ok!</button></a>
+</div>  
 
 <style>
 .background {
@@ -138,8 +141,10 @@ while ($row = mysqli_fetch_array($result)) {
 
 <body>
 <div class="background">
-    
+
     <div class="contentBox1">
+    <br><br><br>
+
     <div class="text-left-header">
     <br>
     <a href="<?php echo $url; ?>/" style="color: white;"><b><?php echo $site_name; ?></b> ⎟ <font style="font-weight: 100;">Helpdesk</font></a>

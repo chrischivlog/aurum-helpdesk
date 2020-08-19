@@ -79,6 +79,7 @@
                         <br>
                         <?php echo $row['details']; ?>
                         </br>
+                        </br>
                     </div>
                 </details>
             <?php

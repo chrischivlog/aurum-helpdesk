@@ -1,5 +1,7 @@
+
+
 <div class="footer">
-    
+
     <div class="contentBox1">
 <center>
     <a href="<?php echo $impressum; ?>" style="color:white;">Impressum </a> ⎢
