@@ -15,7 +15,7 @@
             <br><br>
             <a href="<?php echo $impressum; ?>" style="color:white;">Impressum </a> |
             <a href="<?php echo $datenschutz; ?>" style="color:white;">Datenschutz </a>|
-            <a href="<?php echo $agb; ?>" style="color:white;">Inhalt</a>
+            <a href="sites/content/index.php" style="color:white;">Inhalt</a>
 
             <?php if (empty($agb)) {
             } else { ?>
