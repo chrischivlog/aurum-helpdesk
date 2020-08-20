@@ -21,10 +21,8 @@ $pin = generatePIN(6);
   $Mailnachricht = nl2br("
 
 <html>
-                <h1>Fehler Meldung</h1>
+                <h1>Support Anfrage</h1>
                 Mail: " . $_REQUEST['mail'] . "
-                <br>
-                Name des Nutzers: <br>" . $_REQUEST['user_name'] . "
                 <br>
                 Anliegen: <br>" . $_REQUEST['request1'] . "  			
                 <br>  	      		    

@@ -179,6 +179,32 @@ if (isset($_POST['submit-71'])) {
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>
 
+<!-- MAIL NOREPLY -->
+
+<br>
+<b>Noreply Mail-Adresse</b>
+<br>
+<small>Die Mail muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
+<?php
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '3'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <button name="submit-71" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-71'])) {
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
 <!-- COOKIE TEXT -->
 
 <br>

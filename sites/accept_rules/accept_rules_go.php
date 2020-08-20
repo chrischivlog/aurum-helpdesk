@@ -4,13 +4,13 @@ include('../../assets/recaptcha.php');
 if ($antwortDaten->success) {
 
 
-    $absendername = "helpdesk@epic-playing.de";
-    $absendermail = "helpdesk@epic-playing.de";
+    $absendername = $mail_adress_noreply;
+    $absendermail = $mail_adress_noreply;
     $Mailnachricht = nl2br("
 
 <html>
                 
-                Der User " . $_REQUEST['user'] . " hat die Regeln von Epic-playing.de Akzeptiert. Ein Vermerk wurde in der Datenbank gespeichert.	                						
+                Der Nutzer " . $_REQUEST['user'] . " hat die Bewerbung " . $_GET['id'] . " Bestätigt.	                						
 </html>
 ");
 
@@ -18,15 +18,8 @@ if ($antwortDaten->success) {
     $header[] = 'Content-type: text/html; charset=UTF-8';
     $header[] = "From: $absendername <$absendermail>";
 
-    $Mailbetreff = "Die Regeln wurden von " . $_REQUEST['user'] . " am " . date("d.m.Y") . " akzeptiert.";
-    mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
-
-
-
-    $conn = new mysqli($server, $user, $password, $database);
-    $result = mysqli_query($conn, "INSERT INTO accept_rules (user, rules_accepted) VALUES ('" . $_REQUEST['user'] . "', 'Ja')");
-
-
+    $Mailbetreff = "Bewerbungs bestätigung " . $_REQUEST['user'] . " # " . $_GET['id'] . "";
+    mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));
     ?>
   <h1>Vielen Dank <?php echo $_REQUEST['user'];?> </h1>
   <div class="placeholderUI4"></div>

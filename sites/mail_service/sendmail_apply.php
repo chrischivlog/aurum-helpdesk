@@ -13,11 +13,9 @@ $absendermail = $mail_adress_noreply;
 
 <html>
          Hallo $user Vielen Dank für deine Bewerbung. 
-         <br>
-         <br>
-         Bitte akzeptiere nun die Regeln für Epic-Playing.de. Klicke dazu auf den unten stehenden Link!
+         Bitte bestätige deine Bewerbung. Klicke dazu auf den unten stehenden Link!
          
-         $url/sites/accept_rules/?user=$user
+         $url/sites/accept_rules/?user=$user&id=$pin
 	
 </html>
 ");

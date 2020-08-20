@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <textarea type="text" rows="6" name="request1" required=""></textarea>
                 <br>
                 <br>
-                <b style="float: left;">Warum willst du dich bei epic-playing bewerben?</b>
+                <b style="float: left;">Warum willst du dich bei uns bewerben?</b>
                 <textarea type="text" rows="6" name="request2" required=""></textarea>
                 <br>
                 <br>

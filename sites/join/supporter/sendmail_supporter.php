@@ -30,7 +30,7 @@ $absendermail = $mail_adress_noreply;
                 <br>
                 Stell dich kurz vor: <br>" . $_REQUEST['request1'] . "  			
                 <br>  	      		    
-                Warum willst du dich bei epic-playing bewerben?<br>" . $_REQUEST['request2'] . "
+                Warum willst du dich bei uns bewerben?<br>" . $_REQUEST['request2'] . "
                 <br>
                 Hast du schon erfahrung im Support bereich?<br>" . $_REQUEST['request3'] . "
                 <br>

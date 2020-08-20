@@ -24,7 +24,7 @@ if($_GET){
         <div class="box1">
         </div>
         <div class="box2">
-            <form action="accept_rules_go.php" method="post">
+            <form action="accept_rules_go.php?id=<?php echo $_GET['id'];?>" method="post">
                 <b style="float: left;">Dein Name</b>
                 <input type="text" name="user" value="<?php echo $user ;?>" required="">
                 <br><br>
