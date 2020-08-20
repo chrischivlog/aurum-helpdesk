@@ -16,8 +16,8 @@ if ($antwortDaten->success) {
 
 $pin = generatePIN(6);
 
-$absendername = "helpdesk@epic-playing.de";
-$absendermail = "helpdesk@epic-playing.de";
+$absendername = $mail_adress_noreply;
+$absendermail = $mail_adress_noreply;
   $Mailnachricht = nl2br("
 
 <html>

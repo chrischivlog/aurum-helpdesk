@@ -5,7 +5,7 @@
 
             <?php if (empty($_SESSION['admin'])) { ?>
                 <h3>Dein Anliegen ist nicht aufgeführt?</h3>
-                <div class="tag-start">Support Anfrage stellen</div>
+                <a href="<?php echo $url; ?>sites/support-request/"><div class="tag-start">Support Anfrage stellen</div></a>
                 <br>
             <?php } else { ?>
                 <h3>Da du in einer Admin Sitzung bist:</h3>

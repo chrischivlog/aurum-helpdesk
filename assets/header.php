@@ -89,10 +89,17 @@ while ($row = mysqli_fetch_array($result)) {
     $mail_text = $row["description"];
 }
 
+
 $result = mysqli_query($conn, "SELECT * FROM mail_config WHERE category = 'support-adress'");
 while ($row = mysqli_fetch_array($result)) {
 
     $mail_adress = $row["description"];
+}
+
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE category = 'no-reply'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $mail_adress_noreply = $row["description"];
 }
 
 $result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '1'");
@@ -101,6 +108,11 @@ while ($row = mysqli_fetch_array($result)) {
     $site_name = $row["info"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '23'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $cookie_text = $row["info"];
+}
 ?>
 
 <html lang="de">

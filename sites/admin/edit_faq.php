@@ -21,8 +21,8 @@
         ?> 
 <?php
 if (isset($_POST['submit'])) {
-    $text = $_POST['text'];
-    $title = $_POST['title'];
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
+    $title = mysqli_real_escape_string($conn,$_POST['title']);
 
     ///INSERT CREDS
     $result5 = mysqli_query($conn, "UPDATE faq_article SET details = '$text', title = '$title' WHERE ID = '".$_GET['id']."'");

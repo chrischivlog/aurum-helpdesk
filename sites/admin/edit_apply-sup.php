@@ -24,7 +24,7 @@
 </div>
 <?php
 if (isset($_POST['submit'])) {
-    $text = $_POST['text'];
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
     ///INSERT CREDS
     $result5 = mysqli_query($conn, "UPDATE job_desc SET description = '$text' WHERE category= 'supporter'");
     echo "<meta http-equiv='refresh' content='0; URL=?apply_supporter'>";

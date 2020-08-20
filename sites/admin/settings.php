@@ -86,7 +86,7 @@ $result = mysqli_query($conn, "SELECT * FROM domain_config WHERE ID = '5'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-    <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
+        <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
         <button name="submit-5" class="tag-back" type="submit">
             Absenden
         </button>
@@ -113,7 +113,7 @@ $result = mysqli_query($conn, "SELECT * FROM domain_config WHERE ID = '6'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-    <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
+        <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
         <button name="submit-6" class="tag-back" type="submit">
             Absenden
         </button>
@@ -139,7 +139,7 @@ $result = mysqli_query($conn, "SELECT * FROM domain_config WHERE ID = '7'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-    <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
+        <input type="text" value="<?php echo $row["domain_path"]; ?>" name="text" pattern="https?://.+" title="Bitte Domains immer mit https oder http angeben">
         <button name="submit-7" class="tag-back" type="submit">
             Absenden
         </button>
@@ -164,7 +164,7 @@ $result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '1'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-    <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         <button name="submit-71" class="tag-back" type="submit">
             Absenden
         </button>
@@ -172,9 +172,39 @@ while ($row = mysqli_fetch_array($result)) { ?>
 <?php } ?>
 <?php
 if (isset($_POST['submit-71'])) {
-    $text = $_POST['text'];
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
     ///INSERT CREDS
     $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+<!-- COOKIE TEXT -->
+
+<br>
+<b>Text für den Cookie Banner</b>
+<br>
+
+<?php
+$result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '23'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php if ($row['info'] == NULL) {
+                                        echo "Diese Webseite verwendet Cookies um die richtige Nutzung zu gewährleisten.";
+                                    } else {
+                                        echo $cookie_text;
+                                    } ?>" name="text" placeholder="">
+        <button name="submit-cookies" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-cookies'])) {
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE aurum_info SET info = '$text' WHERE ID = '23'");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>

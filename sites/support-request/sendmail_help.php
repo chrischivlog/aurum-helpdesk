@@ -26,11 +26,9 @@ $pin = generatePIN(6);
                 <br>
                 Name des Nutzers: <br>" . $_REQUEST['user_name'] . "
                 <br>
-                Warum willst du Partner werden? <br>" . $_REQUEST['request1'] . "  			
+                Anliegen: <br>" . $_REQUEST['request1'] . "  			
                 <br>  	      		    
-                Welchen Content erstellst du?<br>" . $_REQUEST['bug_type'] . "
-                <br>
-                Link zu ggf. Bilder und Videos (wenn leer, keine angegeben) <br>" . $_REQUEST['link'] . "
+                Bereich des Anliegen: <br>" . $_REQUEST['type'] . "
                 <br>                
                 <br>	                						
 </html>
@@ -40,7 +38,7 @@ $pin = generatePIN(6);
   $header[] = 'Content-type: text/html; charset=UTF-8';
   $header[] = "From: $absendername <$absendermail>";
 
-  $Mailbetreff = "Support case #" . $pin.  "- von " . $_REQUEST['user_name'] . " Bewerbung ";
+  $Mailbetreff = "Support case #" . $pin.  "- von " . $_REQUEST['type'] . "";
   mail($Empfaenger, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
 
 ?>

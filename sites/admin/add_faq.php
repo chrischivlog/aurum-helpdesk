@@ -17,8 +17,8 @@
 
 if (isset($_POST['submit'])) {
 
-    $title = $_POST['title'];
-    $text = $_POST['text'];
+    $title = mysqli_real_escape_string($conn,$_POST['title']);
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
 
 
     ///CHECK TITLE
@@ -29,7 +29,6 @@ if (isset($_POST['submit'])) {
                         $result2 = mysqli_query($conn, "INSERT INTO faq_article (category, title, details) VALUES ('0', '$title', '$text')");
                         echo "<text style='color: green;'>Erfolgreich eingeplfegt. Leite weiter zur Übersicht in 3 Sekunden</text>";
                         echo " <meta http-equiv='refresh' content='2; URL=?faq'>";
-        
         } else {
 
             

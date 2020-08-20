@@ -11,7 +11,7 @@ if (isset($_GET['addcookies'])) {
 if (empty($_SESSION['cookies'])) {
 ?>
     <div class="cookie-banner">
-        Die Webseite <b><?php echo $site_name; ?></b> verwendet Cookies um die richtige Nutzung zu gewährleisten  <a href="?addcookies"> <button class="tag-start">Ich habe verstanden!</button></a>
+        <?php echo $cookie_text;?> <a href="<?php echo $datenschutz; ?>">Datenschutzerklärung</a>  <a href="?addcookies"> <button class="tag-start">Ich habe verstanden!</button></a>
     </div>
     <br><br><br>
 
