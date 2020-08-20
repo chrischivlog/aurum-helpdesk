@@ -58,7 +58,7 @@
             } else {
                 ?>
                 <br>
-                    <b>Aktuell kannst du dich nicht für den Supporter  Bewerben.</b>
+                    <b>Aktuell kannst du dich nicht als Supporter  Bewerben.</b>
             <?php
             }
         }

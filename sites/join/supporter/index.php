@@ -10,7 +10,6 @@
 </div>
 <br>
 
-
 <div class="text">
     <center>
         <div class="box1">
@@ -23,8 +22,17 @@
                 </div>
             </a>
         </div>
-
         <div class="box2">
+
+<?php
+$result = mysqli_query($conn, "SELECT * FROM jobs_online WHERE description = 'supporter'");
+while ($row = mysqli_fetch_array($result)) {
+
+    if(($row['online']) == '0'){
+        ?><h2>Wir veranstalten aktuell keine Bewerbungsphase. Schau später nochmal vorbeit. 😰</h2><?php
+    } else{
+        ?>
+
             <form action="sendmail_supporter.php" method="post">
                 <b style="float: left;">Dein Name</b>
                 <input type="text" name="user_name" required=""></input>
@@ -79,9 +87,14 @@
         </div>
         <div class="box3"></div>
 </div>
+
+
+<?php
+    }
+}
+?>
 </div>
-
-
+</div>
 </center>
 
 <?php include '../../../assets/footer.php'; ?>

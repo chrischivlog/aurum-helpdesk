@@ -132,6 +132,8 @@ while ($row = mysqli_fetch_array($result)) {
 
 </head>
 <?php include ('cookiebanner.php');?>
+<?php include ('access.php');?>
+
 <style>
 .background {
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $background;?>') no-repeat center center fixed;

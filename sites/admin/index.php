@@ -1,5 +1,11 @@
 <?php include '../../assets/header.php'; ?>
 
+<?php if(isset($_SESSION['admin'])){
+    echo "<meta http-equiv='refresh' content='0; URL=login.php?'>";
+} else {
+}
+?> 
+
 <h1>Admin Loggin</h1>
 <div class="placeholderUI4"></div>
 
@@ -25,7 +31,7 @@
         </div>
 
         <div class="box2">
-            <form action="login.php" method="post">
+            <form method="post">
                 <b style="float: left;">Nutzername für den Admin zugang:</b>
                 <input type="text" name="user_name" required=""></input>
                 <br>
@@ -38,10 +44,28 @@
 <br>
 
 
-                <button name="submit" class="tag-back" type="submit">
+                <button name="submit-admin-access" class="tag-back" type="submit">
                     Absenden
                 </button>
             </form>
+
+
+            <?php 
+            if(isset($_POST['submit-admin-access'])){
+                if ($_POST['user_name']==$admin_user && $_POST['password']==$admin_password){
+                    $_SESSION['admin'] = '1';
+                    echo "<meta http-equiv='refresh' content='0; URL=login.php?'>";
+
+                } else {
+                    echo "Falscher Nutzer oder Passwort. Wende dich an den Admin, sofern du die Logindaten verloren hast.";
+                }
+
+            }
+            ?>
+
+
+
+
             <div class="placeholderUI4"></div>
 
         </div>

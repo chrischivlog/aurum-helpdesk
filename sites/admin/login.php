@@ -9,6 +9,11 @@
 </div>
 </div>
 <br>
+<?php 
+if(isset($_SESSION['admin'])){
+?>
+
+
 <div class="text">
 
         <div class="box1">
@@ -41,9 +46,12 @@
                 </a>
                 <br>
                 <br>
-                <button name="submit" class="tag-logout" type="submit">
+                <?php include 'logout.php';?>
+                <form method="POST">
+                <button name="submit-logout" class="tag-logout" type="submit">
                     Abmelden!
                 </button>       
+                </form>
         </div>
         <div class="box2">
 
@@ -76,7 +84,15 @@
 </div>
 
 
-</center>
+
+<?php
+} else{
+    ?>
+      <meta http-equiv='refresh' content='0; URL=<?php echo $url; ?>sites/admin'>
+      <?php
+
+}
+?>
 
 <?php include '../../assets/footer.php'; ?>
 </body>
