@@ -1,4 +1,3 @@
-</center>
 <br>
 <h2>Bewerbungs-Phasen Administrieren</h2>
 
@@ -11,8 +10,6 @@
 <br><br>
 <b>Beschreibung für ausgeschriebene Stellen:</b>
 <br><br>
-<br>
-
 <a href="?apply_supporter">
     <button name="submit" class="tag-start" type="submit">
         Support
@@ -23,3 +20,4 @@
         Partner
     </button>
 </a>
+</div>

@@ -26,11 +26,13 @@ if (mysqli_num_rows($result) > 0) {
         <?php echo $row_4['details']?>
         <br>
         <br>
+        <a href="?delete_faq&id=<?php echo $row_4['ID']?>">
         <button name="submit" class="tag-start" type="submit">
             Entferenen
         </button>
+        </a>
 
-        <a href="?edit_faq&id">
+        <a href="?edit_faq&id=<?php echo $row_4['ID']?>">
         <button name="submit" class="tag-start" type="submit">
             Bearbeiten
         </button>

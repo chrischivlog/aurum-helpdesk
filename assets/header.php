@@ -59,6 +59,12 @@ while ($row = mysqli_fetch_array($result)) {
     $agb = $row["domain_path"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE description = 'background'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $background = $row["domain_path"];
+}
+
 $result = mysqli_query($conn, "SELECT * FROM google_config WHERE description = 'data-sitekey'");
 while ($row = mysqli_fetch_array($result)) {
 
@@ -128,10 +134,13 @@ while ($row = mysqli_fetch_array($result)) {
 <?php include ('cookiebanner.php');?>
 <style>
 .background {
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.discordapp.net/attachments/597066766903934997/745285695194529974/image1.jpg') no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $background;?>') no-repeat center center fixed;
     background-size: cover;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    <?php if(empty($background)){
+        echo "background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);";
+    }?>
 }
 
 </style>

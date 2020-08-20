@@ -45,7 +45,6 @@
                     Abmelden!
                 </button>       
         </div>
-        <center>
         <div class="box2">
 
         <?php
@@ -57,6 +56,8 @@
             include 'add_faq.php';
         } elseif(isset($_GET['edit_faq'])){
             include 'edit_faq.php';
+        } elseif(isset($_GET['delete_faq'])){
+            include 'delete_faq.php';
         } elseif(isset($_GET['apply'])){
             include 'apply.php';
         } elseif(isset($_GET['apply_supporter'])){
