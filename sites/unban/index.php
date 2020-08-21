@@ -31,12 +31,12 @@
                 <br>
                 <br>
                 <b style="float: left;">Mit welchem Grund wurdest du ausgeschlossen?</b>
-                <input type="text" name="reason" required=""></input>
+                <input type="text" name="request1" required=""></input>
                 <br>
                 <br>
 
                 <b style="float: left;">Wo wurdest du gebannt?</b>
-                <select type="text" name="location" required="">
+                <select type="text" name="request2" required="">
                     <optgroup label="Wähle:">
                         <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
 

@@ -45,6 +45,13 @@ if(isset($_SESSION['admin'])){
                 </button>
                 </a>
                 <br>
+                <br>                
+                <a href="?module">
+                <button name="submit" class="tag-back" type="submit">
+                    Module Verwalten
+                </button>
+                </a>
+                <br>
                 <br>
                 <?php include 'logout.php';?>
                 <form method="POST">
@@ -68,10 +75,10 @@ if(isset($_SESSION['admin'])){
             include 'delete_faq.php';
         } elseif(isset($_GET['apply'])){
             include 'apply.php';
-        } elseif(isset($_GET['apply_supporter'])){
-            include 'edit_apply-sup.php';
-        } elseif(isset($_GET['apply_partner'])){
-            include 'edit_apply-partner.php';
+        } elseif(isset($_GET['add_apply'])){
+            include 'add_apply.php';
+        } elseif(isset($_GET['module'])){
+            include 'module.php';
         } else {
             include 'start.php';
         }

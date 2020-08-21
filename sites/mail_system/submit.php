@@ -2,8 +2,6 @@
 include('../../assets/header.php');
 include('../../assets/recaptcha.php');
 if ($antwortDaten->success) {
-
-  
   function generatePIN($digits = 4){
     $i = 0;
     $pin = "";

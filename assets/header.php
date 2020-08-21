@@ -102,6 +102,12 @@ while ($row = mysqli_fetch_array($result)) {
     $mail_adress_noreply = $row["description"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM modules_enable WHERE ID = '1'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $support_enabled = $row["state"];
+}
+
 $result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '1'");
 while ($row = mysqli_fetch_array($result)) {
 
@@ -151,6 +157,21 @@ $date_server = date("d-m-Y H:i:s");
 <?php include ('access.php');?>
 
 <style>
+    .footer {
+        background:  linear-gradient( rgb(57 19 60 / 36%), rgb(0 0 0)), url('<?php echo $background;?>') no-repeat center center fixed;
+        color: rgb(255, 255, 255);
+        background-size: 100%;
+        padding: 50 50;
+        clear: both;
+        position: relative;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: left;
+        font-weight: 100;
+        margin-top: 20%;
+        <?php if(empty($background)){
+        echo "background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);";
+    }?>
+    }
 .background {
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $background;?>') no-repeat center center fixed;
     background-size: cover;
@@ -159,7 +180,8 @@ $date_server = date("d-m-Y H:i:s");
     <?php if(empty($background)){
         echo "background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);";
     }?>
-}
+
+
 
 </style>
 

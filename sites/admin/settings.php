@@ -1,7 +1,6 @@
 <br>
 <h2>Verwaltung von <?php echo $site_name; ?></h2>
 <h4>Bitte Domains immer mit https oder http angeben</h4>
-<br>
 
 <b>Name des Helpdesk</b>
 <br>

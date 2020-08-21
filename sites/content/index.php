@@ -18,9 +18,7 @@
         <br>
             Aurum verwendet 100% eigenes CSS sowie eigenen PHP und HTML Code. Alle Inhalte die von anderen kommen, sind hier mit ihren jeweiligen Werken verlinkt.
         <h2>Bilder</h2>
-        <li>Standart-Hintergrundbild von Alex Perez <a href="https://unsplash.com/photos/pEgsWN0kwbQ">https://unsplash.com/photos/pEgsWN0kwbQ</a></li>
-        <br>
-        <li>Footer Hintergrundbild von Tim Mossholder <a href="https://unsplash.com/photos/zs-PAgqgenQ">https://unsplash.com/photos/zs-PAgqgenQ</a></li>
+        <li>Footer & Standart-Hintergrundbild von Alex Perez <a href="https://unsplash.com/photos/pEgsWN0kwbQ">https://unsplash.com/photos/pEgsWN0kwbQ</a></li>
         <br>
         <h2>Icons</h2>
         <li>Unicodes & Emojis <a href="https://home.unicode.org/">https://home.unicode.org/</a></li>
