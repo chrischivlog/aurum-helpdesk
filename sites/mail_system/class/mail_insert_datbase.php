@@ -15,7 +15,7 @@ if(isset($_GET['type']) == 'apply') {
                                                                                         <br>Name:<br>$v1
                                                                                         <br>Stell dich kurz vor:<br> $v3
                                                                                         <br>Warum willst du dich bei uns bewerben?<br>$v4  
-                                                                                        <br>Anmerkungen zu deiner Bewerbung<br>$v5', '$pin', '$date_')");
+                                                                                        <br>Anmerkungen zu deiner Bewerbung:<br>$v5', '$pin', '$date_server')");
 } else {
     echo "Es ist ein fehler aufgetreten, falsche Kategorie...";
 

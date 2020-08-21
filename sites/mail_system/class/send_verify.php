@@ -10,10 +10,15 @@ $absendermail = $mail_adress_noreply;
   $Mailnachricht = nl2br("
 
 <html>
-         Hallo $user,
-         Bitte bestätige das erstellen eines Tickets auf $site_name, klicke dazu auf den unten stehenden Link!
+         Hallo,
+         Bitte bestätigen Sie das Erstellen eines Tickets, auf $site_name, klicke hierzu auf den unten stehenden Link!
          
          $url/sites/mail_system/verify.php/?push=$pin
+
+         <b>Information:</b>
+         Bitte bewahren Sie diese Mail auf, bis das Anliegen geklärt ist. 
+
+         <small>Diese Nachricht wurde automatisch generiert.</small>
 	
 </html>
 ");
@@ -41,13 +46,11 @@ $absendermail = $mail_adress_noreply;
   <div class="text">
       <center>
       <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" width="400px"><br>
-      Dein Anliegen wurde übermittelt. 
-      <br>
+      Bitte überprüfe dein Mail-Postfach! 
       <br>
 
       <b>Du wirst in 10 Sekunden zur Startseite zurück geschickt...</b>  
         <meta http-equiv="refresh" content="10; URL=<?php echo $url; ?>">
-        <div class="placeholderUI4"></div>
 
 		  
       </center>

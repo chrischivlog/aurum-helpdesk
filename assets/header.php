@@ -115,7 +115,7 @@ while ($row = mysqli_fetch_array($result)) {
 }
 
 ///ALG. Variable zur vereinfachung der Arbeit
-$date_ = date("d-m-Y H:i:s");
+$date_server = date("d-m-Y H:i:s");
 
 ?>
 
