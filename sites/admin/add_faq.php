@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 
 
     ///CHECK TITLE
-    $result_1 = mysqli_query($conn, "SELECT title FROM faq_article WHERE title == '$title'");
+    $result = mysqli_query($conn, "SELECT title FROM faq_article WHERE title == '$title'");
     if (mysqli_num_rows($result) > 0) {
 
                         ///INSERT CREDS

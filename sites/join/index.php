@@ -29,10 +29,10 @@
     <div class="box2">
         <br>
         <?php
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1' ORDER BY category DESC");
+        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1'");
         while ($row = mysqli_fetch_array($result)) {
         ?>
-            <a href="#<?php echo $row['category']; ?>"><button class="tag-start"><?php echo $row['category']; ?></button></a>
+            <a href="#<?php echo $row['category']; ?>"><button class="tag-start" style="margin-top: 10;"><?php echo $row['category']; ?></button></a>
 
         <?php } ?>
         <br>

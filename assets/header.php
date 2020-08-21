@@ -113,6 +113,10 @@ while ($row = mysqli_fetch_array($result)) {
 
     $cookie_text = $row["info"];
 }
+
+///ALG. Variable zur vereinfachung der Arbeit
+$date_ = date("d-m-Y H:i:s");
+
 ?>
 
 <html lang="de">

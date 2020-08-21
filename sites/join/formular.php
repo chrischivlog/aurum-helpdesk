@@ -30,9 +30,11 @@ while ($row = mysqli_fetch_array($result)) {
     if(($row['online']) == '0'){
         ?><h2>Aktuell sind keine Bewerbungen für <?php echo $_GET['cat'];?> möglich. Schau später nochmal vorbeit. 😰</h2><?php
     } else{
+         
+
         ?>
 
-            <form action="sendmail.php" method="post">
+            <form action="../mail_system/submit.php?type=apply&cat=<?php echo $_GET['cat'];?>" method="post">
                 <b style="float: left;">Dein Name</b>
                 <br>
                 <font style="font-size: 10px; float:left;">Pflichtfeld</font>
