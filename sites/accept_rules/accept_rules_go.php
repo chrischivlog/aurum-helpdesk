@@ -44,7 +44,7 @@ if ($antwortDaten->success) {
 <div class="text">
     <center>
         <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" width="400px"><br>
-        Du hast die Regeln akzeptiert
+        Du hast deine Bewerbung bestätigt.
         <br>
         <br>
 

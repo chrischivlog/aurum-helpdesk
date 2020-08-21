@@ -22,88 +22,83 @@
         </center>
     </div>
 
-    <!---SUPPORTER TEIL--->
+    <!---DYN TEIL--->
+
+
 
     <div class="box2">
-        <h2>Supporter</h2>
         <br>
-        <b>Voraussetzungen</b>
-        <br>
-        <br>
-
-        <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
-
         <?php
-        $conn = new mysqli($server, $user, $password, $database);
-        mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'supporter' ");
+        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1' ORDER BY category DESC");
         while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <!--DATABASE CONNECTION BANN REASONS END-->
-            <?php echo $row['description']; ?>
-            <br>
-        <?php
-        }
-        mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM jobs_online WHERE description = 'supporter'");
-
-        while ($row = mysqli_fetch_array($result)) {
-            if ($row['online'] == '1') {
-                ?>
-                <br>
-                <a href="supporter" class="btn btn-primary">
-                    Jetzt Bewerben
-                </a>
-            <?php
-            } else {
-                ?>
-                <br>
-                    <b>Aktuell kannst du dich nicht als Supporter  Bewerben.</b>
-            <?php
-            }
-        }
         ?>
+            <a href="#<?php echo $row['category']; ?>"><button class="tag-start"><?php echo $row['category']; ?></button></a>
 
-
-        <div class="placeholderUI3"></div>
-
-
-        <!---PARTNER TEIL--->
-        <h2>Partner</h2>
-        <br>
-        <b>Voraussetzungen</b>
+        <?php } ?>
         <br>
         <br>
-
-        <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
-
         <?php
-        $conn = new mysqli($server, $user, $password, $database);
-        mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = 'partner' ORDER BY description DESC");
+        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1'");
         while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <!--DATABASE CONNECTION BANN REASONS END-->
-            <?php echo $row['description']; ?>
-            <br>
-        <?php
-        }
         ?>
+            <h2 id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
+            <br>
+            <b>Voraussetzungen</b>
+            <br>
+            <br>
+
+
+            <?php echo $row['description']; ?><br>
+            Stellenausschreibung aktiv seid: <?php echo $row['date']; ?>
+            <br>
+            <br>
+            <a href="formular?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
+                Jetzt Bewerben
+            </a>
+            <br>
+
+        <?php } ?>
         <br>
-        <a href="partner" class="btn btn-primary">
-            Jetzt Anfragen
-        </a>
         <br>
-        <div class="placeholderUI4"></div>
+    </div>
+    <br>
+    <div class="box3">
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '0' LIMIT 1");
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
+            <h3>Wird aktuell nicht gesucht:</h3>
+            <?php
+    }
+            ?>
+            <div class="box_gray">
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '0'");
+    while ($row = mysqli_fetch_array($result)) {
+    ?>
+
+                <h2 style="margin-top: 12.92;padding-top: 0px;padding-bottom: 0px; margin-bottom: -23;" id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
+                <br>
+                <?php
+                if (isset($row['date']) && $row['date'] > '0') { ?>
+                    <br>
+                    Voraussichtliche neue Stellenausschreibung:
+                <?php echo $row['date'];
+                } else { ?>
+                    <br>
+                    Der Betreiber hat keine weiteren<br> Informationen angegeben, wann es wieder<br> zu einer Stellenausschreibung kommt.
+                <?php }
+                ?>
+    <?php } ?>
+    </div>
+    <br>
 
     </div>
-    <div class="box3"></div>
 
+    <br>
+    <br>
 </div>
-
 </div>
-
-
 
 <?php include '../../assets/footer.php'; ?>
 </body>
