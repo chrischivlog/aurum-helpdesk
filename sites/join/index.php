@@ -52,10 +52,12 @@
             Stellenausschreibung aktiv seid: <?php echo $row['date']; ?>
             <br>
             <br>
-            <a href="formular?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
+            <a href="formular.php?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
                 Jetzt Bewerben
             </a>
             <br>
+            <br>
+            <hr style="    border-color: #ffffff52;">
 
         <?php } ?>
         <br>
