@@ -35,31 +35,45 @@
             <a href="#<?php echo $row['category']; ?>"><button class="tag-start" style="margin-top: 10;"><?php echo $row['category']; ?></button></a>
 
         <?php } ?>
-        <br>
-        <br>
+
+
+
         <?php
         $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1'");
-        while ($row = mysqli_fetch_array($result)) {
-        ?>
-            <h2 id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
-            <br>
-            <b>Voraussetzungen</b>
-            <br>
-            <br>
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+                        while ($row = mysqli_fetch_array($result)) {
 
+                    ?>
 
-            <?php echo $row['description']; ?><br>
-            Stellenausschreibung aktiv seid: <?php echo $row['date']; ?>
-            <br>
-            <br>
-            <a href="formular.php?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
-                Jetzt Bewerben
-            </a>
-            <br>
-            <br>
-            <hr style="    border-color: #ffffff52;">
+                <br>
+                <br>
+                    <h2 id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
+                    <br>
+                    <b>Voraussetzungen</b>
+                    <br>
+                    <br>
+        
+        
+                    <?php echo $row['description']; ?><br>
+                    Stellenausschreibung aktiv seid: <?php echo $row['date']; ?>
+                    <br>
+                    <br>
+                    <a href="formular.php?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
+                        Jetzt Bewerben
+                    </a>
+                    <br>
+                    <br>
+                    <hr style="    border-color: #ffffff52;">
+        
+                <?php 
+                        }
+                } else {
+                    ?><div class="placeholderUI4"></div><?php
 
-        <?php } ?>
+                    echo "<center><h2>Aktuell sind keine Bewerbungen möglich. Schau später nochmal vorbeit. 😰</h2></center>";
+
+                } ?>
         <br>
         <br>
     </div>
