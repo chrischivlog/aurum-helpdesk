@@ -11,7 +11,7 @@ $absendermail = $mail_adress_noreply;
 
 <html>
          Hallo,
-         Bitte bestätigen Sie das Erstellen eines Tickets, auf $site_name, klicke hierzu auf den unten stehenden Link!
+         Bitte bestätigen Sie das Erstellen eines Tickets, auf $site_name, klicke Sie hierzu auf den unten stehenden Link!
          
          $url/sites/mail_system/verify.php/?push=$pin
 
