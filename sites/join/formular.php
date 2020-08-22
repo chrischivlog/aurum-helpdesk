@@ -28,7 +28,7 @@ $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE category = '".$_GET[
 while ($row = mysqli_fetch_array($result)) {
 
     if(($row['online']) == '0'){
-        ?><h2>Aktuell sind keine Bewerbungen für <?php echo $_GET['cat'];?> möglich. Schau später nochmal vorbeit. 😰</h2><?php
+        ?><h2>Aktuell sind keine Bewerbungen für <?php echo $_GET['cat'];?> möglich. Schau später nochmal vorbeis. 😰</h2><?php
     } else{
          
 

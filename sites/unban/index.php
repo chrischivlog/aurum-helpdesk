@@ -25,32 +25,26 @@
         </div>
 
         <div class="box2">
-            <form action="sendmail_unban.php" method="post">
-                <b style="float: left;">Unter welchem Namen wurdest du gebannt?</b>
-                <input type="text" name="user_name" required=""></input>
-                <br>
-                <br>
+            <form action="../mail_system/submit.php?type=bann" method="post">
+                <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
+                <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
+                <input type="mail" name="mail" required></input>
+                <br><br>
+                <b style="float: left;">Bitte gib deinen Namen an</b><br>
+                <input type="mail" name="user_name" required></input>
+                <br><br>
                 <b style="float: left;">Mit welchem Grund wurdest du ausgeschlossen?</b>
-                <input type="text" name="request1" required=""></input>
+                <input type="text" name="request1" required></input>
                 <br>
                 <br>
 
-                <b style="float: left;">Wo wurdest du gebannt?</b>
-                <select type="text" name="request2" required="">
+                <b style="float: left;">Wo wurdest du von uns ausgeschlossen?</b>
+                <select type="text" name="request2" required>
                     <optgroup label="Wähle:">
-                        <!-- BEGINN DATABASE CONNECTION BANN REASONS-->
-
                         <?php
-                        $conn = new mysqli($server, $user, $password, $database);
-                        mysqli_set_charset($conn, "utf8");
-                        $result = mysqli_query($conn, "SELECT * FROM bann_location ORDER BY location DESC");
-                        while ($row = mysqli_fetch_array($result)) {
-                            ?>
-                            <!--DATABASE CONNECTION BANN REASONS END-->
-
-
-
-                            <option><b><?php echo $row['location']; ?></b></option>
+                        $result = mysqli_query($conn, "SELECT * FROM options WHERE type_name = 'bann'");
+                        while ($row = mysqli_fetch_array($result)) {?>
+                            <option><b><?php echo $row['info']; ?></b></option>
                         <?php
                         }
                         ?>
@@ -58,18 +52,14 @@
                 </select>
                 <br>
                 <br>
-                <b style="float: left;">Wann wurdest du gebannt?</b>
-                <input type="text" name="date" value="<?php echo date("d.m.Y"); ?>" placeholder="dd.mm.jjjj hh:mm" required>    
+                <b style="float: left;">Wann wurdest du ausgeschlossen?</b>
+                <input type="text" name="request3" value="<?php echo date("d.m.Y"); ?>" placeholder="dd.mm.jjjj hh:mm" required>    
                 <br>
                 <br>
                 <b style="float: left;">Deine Entschuldigung/Richtigstellung</b>
-                <textarea type="text" rows="6" name="desc" required=""></textarea>
+                <textarea type="text" rows="6" name="request4" required=""></textarea>
                 <br>
                 <br>
-                <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
-                <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required=""></input>
-                <br><br>
                 <input type="checkbox" name="datenschtz" value="Car" required="">Ich habe die <a href="<?php echo $datenschutz; ?>">Datenschutzbestimmungen</a> gelesen und akzeptiert.</input>
                 <br><br>
 

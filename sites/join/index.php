@@ -39,80 +39,62 @@
 
 
         <?php
-        $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '1'");
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-                        while ($row = mysqli_fetch_array($result)) {
+        $result = mysqli_query($conn, "SELECT * FROM job_desc");
+        while ($row = mysqli_fetch_array($result)) {
+            if ($row['online'] == '1') {
 
-                    ?>
+        ?>
 
                 <br>
                 <br>
-                    <h2 id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
-                    <br>
-                    <b>Voraussetzungen</b>
-                    <br>
-                    <br>
-        
-        
-                    <?php echo $row['description']; ?><br>
-                    Stellenausschreibung aktiv seid: <?php echo $row['date']; ?>
-                    <br>
-                    <br>
-                    <a href="formular.php?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
-                        Jetzt Bewerben
-                    </a>
-                    <br>
-                    <br>
-                    <hr style="    border-color: #ffffff52;">
-        
-                <?php 
-                        }
-                } else {
-                    ?><div class="placeholderUI4"></div><?php
+                <h2 id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
+                <br>
+                <b>Voraussetzungen</b>
+                <br>
+                <br>
 
-                    echo "<center><h2>Aktuell sind keine Bewerbungen möglich. Schau später nochmal vorbeit. 😰</h2></center>";
 
-                } ?>
+                <?php echo $row['description']; ?><br>
+                <br>
+                <br>
+                <a href="formular.php?cat=<?php echo $row['category']; ?>" class="btn btn-primary">
+                    Jetzt Bewerben
+                </a>
+                <br>
+                <br>
+                <hr style="    border-color: #ffffff52;">
+            <?php
+            } else {
+            ?>
+                <br>
+                <br>
+                <h2 id="<?php echo $row['category']; ?>">Keine Bewerbung möglich - <?php echo $row['category']; ?></h2>
+                <br>
+                <b>Voraussetzungen</b>
+                <br>
+                <br>
+
+
+                <?php echo $row['description']; ?><br>
+                <br>
+                <hr style="    border-color: #ffffff52;">
+        <?php
+
+            }
+        } ?>
         <br>
         <br>
     </div>
     <br>
     <div class="box3">
-    <?php
-    $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '0' LIMIT 1");
-    while ($row = mysqli_fetch_array($result)) {
-    ?>
-            <h3>Wird aktuell nicht gesucht:</h3>
-            <?php
-    }
-            ?>
-            <div class="box_gray">
-    <?php
-    $result = mysqli_query($conn, "SELECT * FROM job_desc WHERE online = '0'");
-    while ($row = mysqli_fetch_array($result)) {
-    ?>
-
-                <h2 style="margin-top: 12.92;padding-top: 0px;padding-bottom: 0px; margin-bottom: -23;" id="<?php echo $row['category']; ?>"><?php echo $row['category']; ?></h2>
-                <br>
-                <?php
-                if (isset($row['date']) && $row['date'] > '0') { ?>
-                    <br>
-                    Voraussichtliche neue Stellenausschreibung:
-                <?php echo $row['date'];
-                } else { ?>
-                    <br>
-                    Der Betreiber hat keine weiteren<br> Informationen angegeben, wann es wieder<br> zu einer Stellenausschreibung kommt.
-                <?php }
-                ?>
-    <?php } ?>
-    </div>
-    <br>
 
     </div>
+    <br>
 
-    <br>
-    <br>
+</div>
+
+<br>
+<br>
 </div>
 </div>
 
