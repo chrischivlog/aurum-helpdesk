@@ -21,17 +21,16 @@ $absendermail = $mail_adress_noreply;
          $url/sites/mail_system/verify.php/?push=$pin
 
          <b>Information:</b>
-         Bitte bewahren Sie diese Mail auf, bis das Anliegen geklärt ist. 
+         Bitte bewahren Sie diese Mail auf, bis das Anliegen geklärt ist.  
 
          <small>Diese Nachricht wurde automatisch generiert.</small>
 
          <br>
-         <p style='color: gray'>
          <b>Inhalt des Tickts von $Empfaenger2:</b>
-         <hr>
+         <hr style='color:gray;'>
          <br>
          $content
-         </p>
+         </hr>
 	
 </html>
 ");

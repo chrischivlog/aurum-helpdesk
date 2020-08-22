@@ -13,7 +13,7 @@ if($_GET['type'] == 'apply') {
     $v4 = mysqli_real_escape_string($conn,$_POST['request2']);
     $v5 = mysqli_real_escape_string($conn,$_POST['request3']);
 
-    $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<h1>Bewerbung als $cat_v</h1> 
+    $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<b>Bewerbung als $cat_v</b> 
                                                                                         Mail: $v2
                                                                                         <br>Name:<br>$v1
                                                                                         <br>Stell dich kurz vor:<br> $v3
@@ -28,7 +28,7 @@ if($_GET['type'] == 'apply') {
     $v3 = mysqli_real_escape_string($conn,$_POST['request2']);
 
 
-    $result3 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<h1>Allgemeine Support-Anfrage </h1> 
+    $result3 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<b>Allgemeine Support-Anfrage </b> 
                                                                                         Mail: $v1
                                                                                         <br>Kategorie:<br>$v2
                                                                                         <br>
@@ -41,7 +41,7 @@ if($_GET['type'] == 'apply') {
         $v4 = mysqli_real_escape_string($conn,$_POST['request2']);
         $v5 = mysqli_real_escape_string($conn,$_POST['request3']);
     
-        $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<h1>Bugreport $v4</h1> 
+        $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<b>Bugreport $v4</b> 
                                                                                             Mail: $v1
                                                                                             <br>Name:<br>$v2
                                                                                             <br>Beschreibung:<br> $v3
@@ -54,7 +54,7 @@ if($_GET['type'] == 'apply') {
     $v5 = mysqli_real_escape_string($conn,$_POST['request3']);
     $v6 = mysqli_real_escape_string($conn,$_POST['request4']);
 
-    $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<h1>Aufhebung der Sperre von $v2</h1> 
+    $result2 = mysqli_query($conn, "INSERT INTO mail_cache (text, pin, date) VALUES ('<b>Aufhebung der Sperre von $v2</b> 
                                                                                         Mail: $v1
                                                                                         <br>Name:<br>$v2
                                                                                         <br>Grund der Sperre:<br> $v3

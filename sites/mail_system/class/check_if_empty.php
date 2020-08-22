@@ -17,7 +17,7 @@ if($_GET['type'] == 'apply') {
 
 //CHECK IF FORMS EMPTY SUPPORT NOT WITH REQUEST 1 CAUSE not empty by default
 if($_GET['type'] == 'support') {
-    if(empty($_POST['mail'] && $_POST['request2'] && $_POST['request3'])){
+    if(empty($_POST['mail'] && $_POST['request2'])){
         ///SEND BACK TO FORM
         header("Refresh:4; url=../support-request/");
         echo"<h1>Bitte verwende eine Browser der <kbd>required</kbd> als HTML Attribute zulässt!</h1>";
