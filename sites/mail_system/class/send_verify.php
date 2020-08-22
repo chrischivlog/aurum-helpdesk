@@ -5,6 +5,11 @@ if (isset($_GET['mail']) && ($_GET['pin'])){
 $Empfaenger2 = $_GET['mail'];
 $pin = $_GET['pin'];
 
+$result = mysqli_query($conn, "SELECT * FROM mail_cache WHERE pin = '$pin'");
+while ($row = mysqli_fetch_array($result)) {
+
+$content = $row['text'];
+
 $absendername = $mail_adress_noreply;
 $absendermail = $mail_adress_noreply;
   $Mailnachricht = nl2br("
@@ -19,6 +24,14 @@ $absendermail = $mail_adress_noreply;
          Bitte bewahren Sie diese Mail auf, bis das Anliegen geklärt ist. 
 
          <small>Diese Nachricht wurde automatisch generiert.</small>
+
+         <br>
+         <p style='color: gray'>
+         <b>Inhalt des Tickts von $Empfaenger2:</b>
+         <hr>
+         <br>
+         $content
+         </p>
 	
 </html>
 ");
@@ -27,7 +40,7 @@ $absendermail = $mail_adress_noreply;
   $header[] = 'Content-type: text/html';
   $header[] = "From: $absendername <$absendermail>";
 
-  $Mailbetreff = "Deine Anfrage #" . $pin.  " Bestätigen ";
+  $Mailbetreff = "Anfrage #" . $pin.  " Bestätigen ";
   mail($Empfaenger2, $Mailbetreff, $Mailnachricht, implode("\r\n", $header));;
 
 ?>
@@ -55,6 +68,9 @@ $absendermail = $mail_adress_noreply;
 		  
       </center>
   </div>
-<?php } else {
-      ?><meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>"><?php  
+<?php 
+  } 
+} else {
+      ?><meta http-equiv="refresh" content="0; URL=<?php echo $url; ?>"><?php 
+    
 }?>

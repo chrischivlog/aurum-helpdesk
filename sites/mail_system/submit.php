@@ -31,7 +31,7 @@ include './class/mail_insert_datbase.php';
   <div class="text">
       <center>
       <img src="<?php echo $url; ?>/assets/img/loader.gif" width="400px"><br>
-      Bitte habe ein Moment gedult!
+      Bitte habe ein Moment geduld!
       <br>
 
         <div class="placeholderUI4"></div>
