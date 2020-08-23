@@ -108,6 +108,12 @@ while ($row = mysqli_fetch_array($result)) {
     $support_enabled = $row["state"];
 }
 
+$result = mysqli_query($conn, "SELECT * FROM modules_enable WHERE ID = '2'");
+while ($row = mysqli_fetch_array($result)) {
+
+    $unban_enabled = $row["state"];
+}
+
 $result = mysqli_query($conn, "SELECT * FROM aurum_info WHERE ID = '1'");
 while ($row = mysqli_fetch_array($result)) {
 

@@ -4,7 +4,7 @@
 if($_GET['type'] == 'apply') {
     if(isset($_GET['cat'])) {
         $cat_check = $_GET['cat']; ///DEFINE CAT TO REDIRECT
-        if(empty($_POST['user_name'] && $_POST['mail'] && $_POST['request1'] && $_POST['request2'] && $_POST['request3'] )){
+        if(empty($_POST['user_name'] && $_POST['mail'] && $_POST['request1'] && $_POST['request2'])){
             ///SEND BACK TO FORM
             header("Refresh:4; url=../join/formular.php?cat=$cat_check");
             echo"<h1>Bitte verwende eine Browser der <kbd>required</kbd> als HTML Attribute zulässt!</h1>";

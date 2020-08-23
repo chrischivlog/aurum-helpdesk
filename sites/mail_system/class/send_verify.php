@@ -16,7 +16,7 @@ $absendermail = $mail_adress_noreply;
 
 <html>
          Hallo,
-         Bitte bestätigen Sie das Erstellen eines Tickets, auf $site_name, klicke Sie hierzu auf den unten stehenden Link!
+         Bitte bestätigen Sie, dass Erstellen eines Tickets auf $site_name. Klicken Sie hierzu auf den unten stehenden Link, um fortfahren zu können!
          
          $url/sites/mail_system/verify.php/?push=$pin
 
@@ -57,7 +57,7 @@ $absendermail = $mail_adress_noreply;
   
   <div class="text">
       <center>
-      <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" width="400px"><br>
+      <img src="<?php echo $url; ?>/assets/icons/fogg-success-1.png" class="img-redi"><br>
       Bitte überprüfe dein Mail-Postfach! 
       <br>
 

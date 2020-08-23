@@ -30,7 +30,7 @@ include './class/mail_insert_datbase.php';
   
   <div class="text">
       <center>
-      <img src="<?php echo $url; ?>/assets/img/loader.gif" width="400px"><br>
+      <img src="<?php echo $url; ?>/assets/img/loader.gif" class="img-redi"><br>
       Bitte habe einen Moment geduld!
       <br>
 
@@ -60,7 +60,7 @@ include './class/mail_insert_datbase.php';
   
   <div class="text">
       <center>
-      <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" width="400px"><br>
+      <img src="<?php echo $url; ?>/assets/icons/fogg-page-not-found-1.png" class="img-redi"><br>
       Dein Anliegen konnte nicht bearbeitet werden, bitte überpfüfe ob du Java-Script aktiviert hast oder du hast Felder leer gelassen...
       <br>
       <br>

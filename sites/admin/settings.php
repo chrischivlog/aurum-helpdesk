@@ -51,6 +51,137 @@ if (isset($_POST['submit-2'])) {
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>
 
+<!-- GOOGLE ANALYTICS-->
+
+<b>Analytics Tag</b>
+<br>
+<small>Lösche den eintrag um die Integration zu deaktivieren.</small>
+
+<?php
+$result = mysqli_query($conn, "SELECT * FROM google_config WHERE ID = '3'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <textarea type="text" placeholder="Deaktiviert" name="text"><?php echo $row["token"]; ?></textarea>
+        <button name="submit-analytics" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-analytics'])) {
+    $text = $_POST['text'];
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE google_config SET token = '$text' WHERE ID = '3'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+<!-- GOOGLE Site key-->
+
+<b>Data-sitekey für ReCaptcha</b>
+<br>
+<small style="color: red;">Muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
+
+<?php
+$result = mysqli_query($conn, "SELECT * FROM google_config WHERE ID = '1'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text" pattern="[A-Za-z0-9]+" title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
+        <button name="submit-data" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-data'])) {
+    $text = $_POST['text'];
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE google_config SET token = '$text' WHERE ID = '1'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+<!-- GOOGLE secret key-->
+
+<b>Data-secretkey für ReCaptcha</b>
+<br>
+<small style="color: red;">Muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
+
+<?php
+$result = mysqli_query($conn, "SELECT * FROM google_config WHERE ID = '2'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text" pattern="[A-Za-z0-9]+" title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
+        <button name="submit-sceret" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-sceret'])) {
+    $text = $_POST['text'];
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE google_config SET token = '$text' WHERE ID = '2'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+<!-- MAIL -->
+
+<br>
+<b>Mail-Server Daten weitergabe</b>
+<br>
+<small style="color: red;">Muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
+<?php
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '1'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <button name="submit-71" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-71'])) {
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+<!-- MAIL NOREPLY -->
+
+<br>
+<b>Noreply Mail-Adresse</b>
+<br>
+<small style="color: red;">Muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
+<?php
+$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '3'");
+while ($row = mysqli_fetch_array($result)) { ?>
+
+    <form method="POST">
+        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <button name="submit-71" class="tag-back" type="submit">
+            Absenden
+        </button>
+    </form>
+<?php } ?>
+<?php
+if (isset($_POST['submit-71'])) {
+    $text = mysqli_real_escape_string($conn,$_POST['text']);
+    ///INSERT CREDS
+    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
+?>
+    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
+<br>
+
+
 <!-- Impressum -->
 
 <br>
@@ -149,57 +280,6 @@ if (isset($_POST['submit-7'])) {
     $text = $_POST['text'];
     ///INSERT CREDS
     $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = '7'");
-?>
-    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
-<br>
-<!-- MAIL -->
-
-<br>
-<b>Mail-Server Daten weitergabe</b>
-<br>
-<small>Die Mail muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
-<?php
-$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '1'");
-while ($row = mysqli_fetch_array($result)) { ?>
-
-    <form method="POST">
-        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        <button name="submit-71" class="tag-back" type="submit">
-            Absenden
-        </button>
-    </form>
-<?php } ?>
-<?php
-if (isset($_POST['submit-71'])) {
-    $text = mysqli_real_escape_string($conn,$_POST['text']);
-    ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
-?>
-    <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
-<br>
-
-<!-- MAIL NOREPLY -->
-
-<br>
-<b>Noreply Mail-Adresse</b>
-<br>
-<small>Die Mail muss angegeben werden, da sonst der Support Desk nicht Funktioniert!</small>
-<?php
-$result = mysqli_query($conn, "SELECT * FROM mail_config WHERE ID = '3'");
-while ($row = mysqli_fetch_array($result)) { ?>
-
-    <form method="POST">
-        <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        <button name="submit-71" class="tag-back" type="submit">
-            Absenden
-        </button>
-    </form>
-<?php } ?>
-<?php
-if (isset($_POST['submit-71'])) {
-    $text = mysqli_real_escape_string($conn,$_POST['text']);
-    ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>

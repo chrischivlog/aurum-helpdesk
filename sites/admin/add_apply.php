@@ -9,7 +9,7 @@
     <br>
     <b style="float: left;">Voraussetzungen:</b>
     <textarea type="text" name="text" rows="14" required></textarea>
-    <button name="submit" class="tag-back" type="submit">
+    <button  type="submit" name="submit" class="tag-back">
         Absenden
     </button>
 </form>

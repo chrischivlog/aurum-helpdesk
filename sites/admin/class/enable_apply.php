@@ -23,7 +23,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </a>
                 <br><br>
                 <a href="?apply&delete=<?php echo $row['category']; ?>">
-                    <button class="tag-logout">Löschen</button>
+                    <button class="tag-logout">Löschen (Nicht wiederherstellbar)</button>
                 </a>
                 <br>
                 <br>
