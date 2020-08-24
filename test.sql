@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 22. Aug 2020 um 11:24
+-- Erstellungszeit: 24. Aug 2020 um 09:21
 -- Server-Version: 10.4.14-MariaDB
 -- PHP-Version: 7.4.9
 
@@ -81,7 +81,7 @@ INSERT INTO `domain_config` (`ID`, `domain_path`, `description`) VALUES
 (4, 'https://aurum-helpdesk.com/terms', 'impressum'),
 (5, 'https://aurum-helpdesk.com/terms', 'datenschutz'),
 (6, '', 'agb'),
-(7, 'http://localhost/aurum-helpdesk/assets/img/background.jpg', 'background');
+(7, 'https://media.discordapp.net/attachments/597066766903934997/745285695194529974/image1.jpg', 'background');
 
 -- --------------------------------------------------------
 
@@ -121,7 +121,8 @@ CREATE TABLE `google_config` (
 
 INSERT INTO `google_config` (`ID`, `description`, `token`) VALUES
 (1, 'data-sitekey', '6LdJbLgUAAAAAOeD1Sb14C2Na0u30DJZ-eqWodfQ'),
-(2, 'secretkey', '6LdJbLgUAAAAAEbbM4RiyiavbCa_AX8pgkZx8thr');
+(2, 'secretkey', '6LdJbLgUAAAAAEbbM4RiyiavbCa_AX8pgkZx8thr'),
+(3, 'analytics', '');
 
 -- --------------------------------------------------------
 
@@ -133,18 +134,17 @@ CREATE TABLE `job_desc` (
   `ID` int(11) NOT NULL,
   `category` text NOT NULL,
   `description` text NOT NULL,
-  `online` text NOT NULL,
-  `date` text NOT NULL
+  `online` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Daten für Tabelle `job_desc`
 --
 
-INSERT INTO `job_desc` (`ID`, `category`, `description`, `online`, `date`) VALUES
-(1, 'Supporter', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<br>\r\n<br>\r\n<li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '1', ''),
-(2, 'Partner', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0', ''),
-(9, 'Developer', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0', '');
+INSERT INTO `job_desc` (`ID`, `category`, `description`, `online`) VALUES
+(1, 'Supporter', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<br>\r\n<br>\r\n<li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '1'),
+(2, 'Partner', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0'),
+(9, 'Developer', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0');
 
 -- --------------------------------------------------------
 
@@ -165,7 +165,9 @@ CREATE TABLE `mail_cache` (
 
 INSERT INTO `mail_cache` (`ID`, `text`, `pin`, `date`) VALUES
 (27, '<h1>Aufhebung der Sperre von blabla</h1> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>blabla\r\n                                                                                        <br>Grund der Sperre:<br> sadasd\r\n                                                                                        <br>Ort der Sperre:<br>ssss\r\n                                                                                        <br>Datum:<br>22.08.2020\r\n                                                                                        <br>\r\n                                                                                        <br>Text des Nutzers:<br>asdadsads', '901118', '22-08-2020 10:57:16'),
-(28, '<h1>Aufhebung der Sperre von blabla</h1> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>blabla\r\n                                                                                        <br>Grund der Sperre:<br> sadasd\r\n                                                                                        <br>Ort der Sperre:<br>ssss\r\n                                                                                        <br>Datum:<br>22.08.2020\r\n                                                                                        <br>\r\n                                                                                        <br>Text des Nutzers:<br>asdadsads', '098255', '22-08-2020 10:57:29');
+(28, '<h1>Aufhebung der Sperre von blabla</h1> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>blabla\r\n                                                                                        <br>Grund der Sperre:<br> sadasd\r\n                                                                                        <br>Ort der Sperre:<br>ssss\r\n                                                                                        <br>Datum:<br>22.08.2020\r\n                                                                                        <br>\r\n                                                                                        <br>Text des Nutzers:<br>asdadsads', '098255', '22-08-2020 10:57:29'),
+(29, '<h1>Bugreport ssss</h1> \r\n                                                                                            Mail: chrischivlog@gmail.com\r\n                                                                                            <br>Name:<br>sfd\r\n                                                                                            <br>Beschreibung:<br> fsdsdfdsf\r\n                                                                                            <br>Weitere Anhänge oder Links:<br>sdfsfd', '224527', '22-08-2020 11:33:25'),
+(30, '<b>Bewerbung als Supporter</b> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>sadasdasd\r\n                                                                                        <br>Stell dich kurz vor:<br> sasaas\r\n                                                                                        <br>Warum willst du dich bei uns bewerben?<br>asas  \r\n                                                                                        <br>Anmerkungen zu deiner Bewerbung:<br>', '517611', '23-08-2020 13:07:07');
 
 -- --------------------------------------------------------
 
@@ -206,7 +208,8 @@ CREATE TABLE `modules_enable` (
 --
 
 INSERT INTO `modules_enable` (`ID`, `name`, `state`) VALUES
-(1, 'support', '1');
+(1, 'support', '1'),
+(2, 'unban', '0');
 
 -- --------------------------------------------------------
 
@@ -225,8 +228,8 @@ CREATE TABLE `options` (
 --
 
 INSERT INTO `options` (`ID`, `info`, `type_name`) VALUES
-(1, 'ssss', 'bug'),
-(2, 'ssss', 'bann');
+(4, 'sdsd', 'Bann'),
+(5, 'sdsd', 'Bug');
 
 --
 -- Indizes der exportierten Tabellen
@@ -324,19 +327,19 @@ ALTER TABLE `faq_article`
 -- AUTO_INCREMENT für Tabelle `google_config`
 --
 ALTER TABLE `google_config`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `job_desc`
 --
 ALTER TABLE `job_desc`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT für Tabelle `mail_cache`
 --
 ALTER TABLE `mail_cache`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT für Tabelle `mail_config`
@@ -348,13 +351,13 @@ ALTER TABLE `mail_config`
 -- AUTO_INCREMENT für Tabelle `modules_enable`
 --
 ALTER TABLE `modules_enable`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT für Tabelle `options`
 --
 ALTER TABLE `options`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

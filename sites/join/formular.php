@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <br>
                 <b style="float: left;">Bitte gib eine E-mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required=""></input>
+                <input type="email" name="mail" required=""></input>
                 <br>
                 <br>           
                 <b style="float: left;">Stell dich vor:</b>

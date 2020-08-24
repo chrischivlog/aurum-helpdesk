@@ -23,12 +23,12 @@
                 </div>
             </a>
         </div>
-
+        <?php if($unban_enabled == '1'){?>
         <div class="box2">
             <form action="../mail_system/submit.php?type=bann" method="post">
                 <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required></input>
+                <input type="email" name="mail" required></input>
                 <br><br>
                 <b style="float: left;">Bitte gib deinen Namen an</b><br>
                 <input type="mail" name="user_name" required></input>
@@ -42,7 +42,7 @@
                 <select type="text" name="request2" required>
                     <optgroup label="Wähle:">
                         <?php
-                        $result = mysqli_query($conn, "SELECT * FROM options WHERE type_name = 'bann'");
+                        $result = mysqli_query($conn, "SELECT * FROM options WHERE type_name = 'Bann'");
                         while ($row = mysqli_fetch_array($result)) {?>
                             <option><b><?php echo $row['info']; ?></b></option>
                         <?php
@@ -85,7 +85,12 @@
         <div class="box3"></div>
 </div>
 </div>
-
+                <?php }else{?>
+                    <div class="box2">
+                    <h2>Der Betereiber hat dieses Formular deaktiviert!</h2>
+                </div>
+                    </div>
+                <?php }?>
 
 </center>
 

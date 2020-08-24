@@ -23,11 +23,11 @@
             <?php } ?>
             <?php if (empty($_SESSION['admin'])) {
             } else { ?>
-                | <a href="<?php echo $url; ?>sites/admin/" style="color:white;">Admin Panel </a>
+                | <a href="<?php echo $url; ?>sites/admin/" style="color:white;" target="_blank">Admin Panel </a>
             <?php } ?>
             <br>
             <br>
-            aurum infinity 2.0 Helpdesk
+            © 2019 - <?php echo date("Y");?> aurum infinity by Christopher Oneisz - Version 2.32.2
 
         </center>
     </div>

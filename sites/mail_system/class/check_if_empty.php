@@ -30,7 +30,7 @@ if($_GET['type'] == 'support') {
 
 //CHECK IF FORMS EMPTY BUG NOT WITH REQUEST 1 CAUSE not empty by default
 if($_GET['type'] == 'bug') {
-        if(empty($_POST['user_name'] && $_POST['mail'] && $_POST['request2'] && $_POST['request3'])){
+        if(empty($_POST['user_name'] && $_POST['mail'] && $_POST['request2'])){
             ///SEND BACK TO FORM
             header("Refresh:4; url=../bugreport/");
             echo"<h1>Bitte verwende eine Browser der <kbd>required</kbd> als HTML Attribute zulässt!</h1>";

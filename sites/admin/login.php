@@ -25,6 +25,13 @@ if(isset($_SESSION['admin'])){
                 </a>
                 <br>
                 <br>
+                <a href="?module">
+                <button name="submit" class="tag-back" type="submit">
+                    Module Verwalten
+                </button>
+                </a>
+                <br>
+                <br>
                 <a href="?faq">
                 <button name="submit" class="tag-back" type="submit">
                     FAQ Verwalten
@@ -39,6 +46,13 @@ if(isset($_SESSION['admin'])){
                 </a>
                 <br>
                 <br>
+                <a href="?option">
+                <button name="submit" class="tag-back" type="submit">
+                    Formular Optionen Verwalten
+                </button>
+                </a>
+                <br>
+                <br>
                 <a href="?apply">
                 <button name="submit" class="tag-back" type="submit">
                     Bewerbungphase Verwalten
@@ -46,13 +60,6 @@ if(isset($_SESSION['admin'])){
                 </a>
                 <br>
                 <br>                
-                <a href="?module">
-                <button name="submit" class="tag-back" type="submit">
-                    Module Verwalten
-                </button>
-                </a>
-                <br>
-                <br>
                 <?php include 'logout.php';?>
                 <form method="POST">
                 <button name="submit-logout" class="tag-logout" type="submit">
@@ -79,6 +86,8 @@ if(isset($_SESSION['admin'])){
             include 'add_apply.php';
         } elseif(isset($_GET['module'])){
             include 'module.php';
+        } elseif(isset($_GET['option'])){
+            include 'option.php';
         } else {
             include 'start.php';
         }

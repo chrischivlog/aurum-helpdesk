@@ -28,7 +28,7 @@
             <form action="../mail_system/submit.php?type=bug" method="post">
             <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required=""></input>
+                <input type="email" name="mail" required=""></input>
                 <br><br>
                 <b style="float: left;">Dein Name</b>
                 <input type="text" name="user_name" required=""></input>
@@ -43,7 +43,7 @@
 				<optgroup label="Wähle bitte aus...">
 					<?php
 						mysqli_set_charset($conn, "utf8");
-						$result = mysqli_query($conn, "SELECT * FROM options WHERE type_name = 'bug' ORDER BY info DESC");
+						$result = mysqli_query($conn, "SELECT * FROM options WHERE type_name = 'Bug' ORDER BY info DESC");
 
 						while ($row = mysqli_fetch_array($result)) { ?>
 					<option value="<?php  echo $row['info'];?>"><?php echo $row['info'];?></option>

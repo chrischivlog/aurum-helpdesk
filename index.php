@@ -75,11 +75,10 @@
         </div> <br>
         <br>
 
-        <h1 >FAQ</h1>
+        <h2>Häufig gestellte Fragen</h2>
 
         <div id="faq"></div>
         <?php
-        $conn = new mysqli($server, $user, $password, $database);
         mysqli_set_charset($conn, "utf8");
         $result = mysqli_query($conn, "SELECT * FROM faq_article ORDER BY title DESC");
         while ($row = mysqli_fetch_array($result)) {

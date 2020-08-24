@@ -23,12 +23,13 @@
             </a>
         </div>
     </center>
+    <?php if($support_enabled == '1'){?>
 
         <div class="box2">
             <form action="../mail_system/submit.php?type=support" method="post">
             <b style="float: left;">Bitte gib eine E-Mail Adresse an!</b><br>
                 <font style="font-size: 10px; float:left;">Die Mail wird nur zur Bearbeitung deines Anliegens benutzt. </font>
-                <input type="mail" name="mail" required=""></input>
+                <input type="email" name="mail" required=""></input>
                 <br><br>
                 <b>Wie können wir dir Helfen?</b><p>  
                 <small>Anfragen zu Bugs oder Bewerbungen werden möglicherweiße über dieses Formular nicht beantwortet.</small>
@@ -61,6 +62,12 @@
                     Absenden
                 </button>
             </form>
+            <?php }else{?>
+                    <div class="box2">
+                    <h2>Der Betereiber hat dieses Formular deaktiviert!</h2>
+                </div>
+                    </div>
+                <?php }?>
             <div class="placeholderUI4"></div>
 
         </div>
