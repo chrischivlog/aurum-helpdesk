@@ -31,7 +31,7 @@
                 <input type="email" name="mail" required></input>
                 <br><br>
                 <b style="float: left;">Bitte gib deinen Namen an</b><br>
-                <input type="mail" name="user_name" required></input>
+                <input type="text" name="user_name" required></input>
                 <br><br>
                 <b style="float: left;">Mit welchem Grund wurdest du ausgeschlossen?</b>
                 <input type="text" name="request1" required></input>

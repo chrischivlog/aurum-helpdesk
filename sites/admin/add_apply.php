@@ -5,7 +5,7 @@
 
 <form method="POST">
     <b style="float: left;">Name:</b>
-    <input type="text" name="name" required></input>
+    <input type="text" name="name" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" title="Bitte schreibe ohne Leerzeichen und weniger als 20 Buchstaben."></input>
     <br>
     <b style="float: left;">Voraussetzungen:</b>
     <textarea type="text" name="text" rows="14" required></textarea>

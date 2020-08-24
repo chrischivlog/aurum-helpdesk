@@ -76,11 +76,11 @@
         <br>
 
         <h2>Häufig gestellte Fragen</h2>
-
+        <br>
         <div id="faq"></div>
         <?php
         mysqli_set_charset($conn, "utf8");
-        $result = mysqli_query($conn, "SELECT * FROM faq_article ORDER BY title DESC");
+        $result = mysqli_query($conn, "SELECT * FROM faq_article ORDER BY ID ASC");
         while ($row = mysqli_fetch_array($result)) {
         ?>
             <p>
@@ -100,7 +100,6 @@
             <?php
         }
             ?>
-            <div class="placeholderUI4" ></div>
 
 </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Aug 2020 um 09:21
+-- Erstellungszeit: 24. Aug 2020 um 10:32
 -- Server-Version: 10.4.14-MariaDB
 -- PHP-Version: 7.4.9
 
@@ -43,24 +43,6 @@ INSERT INTO `aurum_info` (`ID`, `info`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `bann_location`
---
-
-CREATE TABLE `bann_location` (
-  `ID` int(11) NOT NULL,
-  `location` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Daten für Tabelle `bann_location`
---
-
-INSERT INTO `bann_location` (`ID`, `location`) VALUES
-(1, 'Teamspeak 3 Server');
-
--- --------------------------------------------------------
-
---
 -- Tabellenstruktur für Tabelle `domain_config`
 --
 
@@ -77,10 +59,9 @@ CREATE TABLE `domain_config` (
 INSERT INTO `domain_config` (`ID`, `domain_path`, `description`) VALUES
 (1, 'http://localhost/aurum-helpdesk/', 'domain'),
 (2, '', 'tidio'),
-(3, 'https://epic-playing.de/Forum/index.php?legal-notice/', 'datenschutz'),
-(4, 'https://aurum-helpdesk.com/terms', 'impressum'),
-(5, 'https://aurum-helpdesk.com/terms', 'datenschutz'),
-(6, '', 'agb'),
+(3, 'https://aurum-helpdesk.com/datenschutz', 'datenschutz'),
+(4, 'https://aurum-helpdesk.com/impressum', 'impressum'),
+(6, 'https://aurum-helpdesk.com/agb', 'agb'),
 (7, 'https://media.discordapp.net/attachments/597066766903934997/745285695194529974/image1.jpg', 'background');
 
 -- --------------------------------------------------------
@@ -101,7 +82,9 @@ CREATE TABLE `faq_article` (
 --
 
 INSERT INTO `faq_article` (`ID`, `category`, `title`, `details`) VALUES
-(23, '0', 'Text hier', 'FAQ Hierdsfdfsdsdfffffffffffffff');
+(23, '0', 'Erster FAQ eintrag', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(27, '0', 'Zweiter FAQ eintrag', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(28, '0', 'Dritter FAQ eintrag', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
 
 -- --------------------------------------------------------
 
@@ -142,9 +125,9 @@ CREATE TABLE `job_desc` (
 --
 
 INSERT INTO `job_desc` (`ID`, `category`, `description`, `online`) VALUES
-(1, 'Supporter', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<br>\r\n<br>\r\n<li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '1'),
-(2, 'Partner', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0'),
-(9, 'Developer', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0');
+(1, 'Beispiel-Stelle1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n<br>\r\n<br>\r\n<li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    <li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '1'),
+(2, 'Beispiel-Stelle2', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0'),
+(9, 'Beispiel-Stelle3', '                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>  \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n<li>Hier kann der Inhalt stehen</li>    \r\n    \r\n         \r\n         \r\n         \r\n         \r\n         \r\n     ', '0');
 
 -- --------------------------------------------------------
 
@@ -187,7 +170,7 @@ CREATE TABLE `mail_config` (
 --
 
 INSERT INTO `mail_config` (`ID`, `category`, `description`, `other`) VALUES
-(1, 'support-adress', 'coneisz+mctbetndtrbhy43lkerg@boards.trello.com', ''),
+(1, 'support-adress', 'support@aurum-helpdesk.com', ''),
 (2, 'mail-versendet', 'Hallo, dein Anliegen ist bei uns eingegangen und wird bearbeitet. Sofern wir nachfragen haben, werden wir dich über deine angegebene Mail kontaktieren. <br>Solltest du noch Fragen haben, kontaktiere uns einfach via Support-Chat.<br><br>\\r\\n\\r\\nMit freundlichen Grüßen\\r\\nDein Epic-Playing Team\\r\\n\\r\\n\\r\\n----------\\r\\nMail wurde vom Aurum Helpdesk erstellt. \r\nMit freundlichen Grüßen\r\nDein Epic-Playing Team\r\n\r\n\r\n----------\r\nMail wurde vom Aurum Helpdesk erstellt. ', ''),
 (3, 'no-reply', 'aurum@aurum-helpdesk.com', '');
 
@@ -209,7 +192,7 @@ CREATE TABLE `modules_enable` (
 
 INSERT INTO `modules_enable` (`ID`, `name`, `state`) VALUES
 (1, 'support', '1'),
-(2, 'unban', '0');
+(2, 'unban', '1');
 
 -- --------------------------------------------------------
 
@@ -228,8 +211,8 @@ CREATE TABLE `options` (
 --
 
 INSERT INTO `options` (`ID`, `info`, `type_name`) VALUES
-(4, 'sdsd', 'Bann'),
-(5, 'sdsd', 'Bug');
+(4, 'Erste Option', 'Bann'),
+(5, 'Erste Option', 'Bug');
 
 --
 -- Indizes der exportierten Tabellen
@@ -239,12 +222,6 @@ INSERT INTO `options` (`ID`, `info`, `type_name`) VALUES
 -- Indizes für die Tabelle `aurum_info`
 --
 ALTER TABLE `aurum_info`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indizes für die Tabelle `bann_location`
---
-ALTER TABLE `bann_location`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -306,12 +283,6 @@ ALTER TABLE `aurum_info`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT für Tabelle `bann_location`
---
-ALTER TABLE `bann_location`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT für Tabelle `domain_config`
 --
 ALTER TABLE `domain_config`
@@ -321,7 +292,7 @@ ALTER TABLE `domain_config`
 -- AUTO_INCREMENT für Tabelle `faq_article`
 --
 ALTER TABLE `faq_article`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT für Tabelle `google_config`
@@ -333,7 +304,7 @@ ALTER TABLE `google_config`
 -- AUTO_INCREMENT für Tabelle `job_desc`
 --
 ALTER TABLE `job_desc`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT für Tabelle `mail_cache`

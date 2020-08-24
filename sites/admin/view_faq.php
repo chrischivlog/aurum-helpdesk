@@ -26,7 +26,7 @@ if (mysqli_num_rows($result) > 0) {
         <?php echo $row_4['details']?>
         <br>
         <br>
-        <a href="?delete_faq&id=<?php echo $row_4['ID']?>">
+        <a href="?delete_faq&id=<?php echo $row_4['ID']?>" href="url_to_delete" onclick="return confirm('Soll der Eintrag <?php echo $row_4['title']; ?> wirklich entfernt werden?');">
         <button name="submit" class="tag-start" type="submit">
             Entferenen
         </button>
@@ -40,7 +40,6 @@ if (mysqli_num_rows($result) > 0) {
 
     </div>
 </details>
-<br>
 <?php 
     }
 }
