@@ -6,7 +6,7 @@
 }
 ?> 
 
-<h1>Admin Loggin</h1>
+<h1>Admin Login</h1>
 <div class="placeholderUI4"></div>
 
 </center>

@@ -1,11 +1,11 @@
 <h2>Willkommen in der Übersicht von Aurum infinity, hier kannst du deinen Helpdesk Administrieren.</h2>
 <form method="POST">
-        <b style="float: left;">Bug oder Feature Request an Etwickler senden:</b>
+        <b style="float: left;">Bug oder Feature Request an Entwickler senden:</b>
         <br>
                 <select required="required" name="select">
 				<optgroup label="Wähle bitte aus...">
-                    <option value="Feature Request">Feature Request</option>
-                    <option value="Bug">Bug</option>
+                    <option value="Feature Request">Funktion vorschlagen</option>
+                    <option value="Bug">Fehler Melden</option>
 				</optgroup>
             </select>
             <b style="float: left;">Beschreibung:</b>
