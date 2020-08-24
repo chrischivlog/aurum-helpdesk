@@ -201,7 +201,7 @@ while ($row = mysqli_fetch_array($result)) { ?>
 if (isset($_POST['submit-4'])) {
     $text = $_POST['text'];
     ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = '4'");
+    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = ''");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>
@@ -212,7 +212,7 @@ if (isset($_POST['submit-4'])) {
 <br>
 <b>Datenschutzerklärung</b>
 <?php
-$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE ID = '5'");
+$result = mysqli_query($conn, "SELECT * FROM domain_config WHERE ID = '3'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
@@ -226,7 +226,7 @@ while ($row = mysqli_fetch_array($result)) { ?>
 if (isset($_POST['submit-5'])) {
     $text = $_POST['text'];
     ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = '5'");
+    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = '3'");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>

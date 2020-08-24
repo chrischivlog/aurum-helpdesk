@@ -21,20 +21,13 @@ if (isset($_POST['submit'])) {
     $text = mysqli_real_escape_string($conn,$_POST['text']);
 
 
-    ///CHECK TITLE
-    $result = mysqli_query($conn, "SELECT title FROM faq_article WHERE title == '$title'");
-    if (mysqli_num_rows($result) > 0) {
+
 
                         ///INSERT CREDS
                         $result2 = mysqli_query($conn, "INSERT INTO faq_article (category, title, details) VALUES ('0', '$title', '$text')");
                         echo "<text style='color: green;'>Erfolgreich eingeplfegt. Leite weiter zur Übersicht in 3 Sekunden</text>";
                         echo " <meta http-equiv='refresh' content='2; URL=?faq'>";
-        } else {
 
-            
-            echo "<text style='color: red;'>Beitrag mit diesem Titel schon vorhanden</text>";
-
-        }
 
 
     }
