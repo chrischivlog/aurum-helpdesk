@@ -27,7 +27,7 @@
             <?php } ?>
             <br>
             <br>
-            © 2019 - <?php echo date("Y");?> aurum infinity by Christopher Oneisz - Version 2.32.2
+            aurum infinity by Christopher Oneisz - Version 2.32.2
  
         </center>
     </div>
