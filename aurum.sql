@@ -103,8 +103,8 @@ CREATE TABLE `google_config` (
 --
 
 INSERT INTO `google_config` (`ID`, `description`, `token`) VALUES
-(1, 'data-sitekey', '6LdJbLgUAAAAAOeD1Sb14C2Na0u30DJZ-eqWodfQ'),
-(2, 'secretkey', '6LdJbLgUAAAAAEbbM4RiyiavbCa_AX8pgkZx8thr'),
+(1, 'data-sitekey', ''),
+(2, 'secretkey', ''),
 (3, 'analytics', '');
 
 -- --------------------------------------------------------
