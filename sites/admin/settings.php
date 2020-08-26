@@ -88,7 +88,7 @@ $result = mysqli_query($conn, "SELECT * FROM google_config WHERE ID = '1'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text" pattern="[A-Za-z0-9]+" title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
+        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text" title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
         <button name="submit-data" class="tag-back" type="submit">
             Absenden
         </button>
@@ -114,7 +114,7 @@ $result = mysqli_query($conn, "SELECT * FROM google_config WHERE ID = '2'");
 while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
-        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text" pattern="[A-Za-z0-9]+" title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
+        <input type="text" value="<?php echo $row["token"]; ?>" placeholder="Deaktiviert" name="text"  title="Bitte gib gib einen Data-sitekey für ReCaptcha an!" required>
         <button name="submit-sceret" class="tag-back" type="submit">
             Absenden
         </button>
@@ -176,7 +176,7 @@ while ($row = mysqli_fetch_array($result)) { ?>
 if (isset($_POST['submit-71'])) {
     $text = mysqli_real_escape_string($conn,$_POST['text']);
     ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '1'");
+    $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '3'");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>
