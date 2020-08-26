@@ -201,7 +201,7 @@ while ($row = mysqli_fetch_array($result)) { ?>
 if (isset($_POST['submit-4'])) {
     $text = $_POST['text'];
     ///INSERT CREDS
-    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = ''");
+    $result5 = mysqli_query($conn, "UPDATE domain_config SET domain_path = '$text' WHERE ID = '4'");
 ?>
     <meta http-equiv='refresh' content='0; URL=?settings'><?php } ?>
 <br>
