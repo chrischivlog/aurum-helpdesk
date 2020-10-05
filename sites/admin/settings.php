@@ -167,13 +167,13 @@ while ($row = mysqli_fetch_array($result)) { ?>
 
     <form method="POST">
         <input type="text" value="<?php echo $row["description"]; ?>" name="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        <button name="submit-71" class="tag-back" type="submit">
+        <button name="submit-72" class="tag-back" type="submit">
             Absenden
         </button>
     </form>
 <?php } ?>
 <?php
-if (isset($_POST['submit-71'])) {
+if (isset($_POST['submit-72'])) {
     $text = mysqli_real_escape_string($conn,$_POST['text']);
     ///INSERT CREDS
     $result5 = mysqli_query($conn, "UPDATE mail_config SET description = '$text' WHERE ID = '3'");
