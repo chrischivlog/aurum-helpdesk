@@ -184,7 +184,7 @@ $date_server = date("d-m-Y H:i:s");
 <style>
 
 .background {
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $background;?>') no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $url;?>/assets/img/background2.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

@@ -1,5 +1,4 @@
 <div class="footer">
-
     <div class="contentBox1">
         <center>
 
@@ -12,18 +11,18 @@
 
                 <?php } 
             ?>
-            <br><br>
-            <a href="<?php echo $impressum; ?>" style="color:white;">Impressum </a> |
-            <a href="<?php echo $datenschutz; ?>" style="color:white;">Datenschutz </a>|
-            <a href="<?php echo $url; ?>sites/content/index.php" style="color:white;">Inhalt</a>
+            <br>
+            <a href="<?php echo $impressum; ?>" style="color:black;">Impressum </a> |
+            <a href="<?php echo $datenschutz; ?>" style="color:black;">Datenschutz </a>|
+            <a href="<?php echo $url; ?>sites/content/index.php" style="color:black;">Inhalt</a>
 
             <?php if (empty($agb)) {
             } else { ?>
-                | <a href="<?php echo $agb; ?>" style="color:white;">AGB </a>
+                | <a href="<?php echo $agb; ?>" style="color:black;">AGB </a>
             <?php } ?>
             <?php if (empty($_SESSION['admin'])) {
             } else { ?>
-                | <a href="<?php echo $url; ?>sites/admin/" style="color:white;" target="_blank">Admin Panel </a>
+                | <a href="<?php echo $url; ?>sites/admin/" style="color:black;" target="_blank">Admin Panel </a>
             <?php } ?>
             <br>
             <br>
