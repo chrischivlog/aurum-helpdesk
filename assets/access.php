@@ -1,4 +1,4 @@
 <?php
-$admin_user = 'admin';
-$admin_password = 'foobar';
+$admin_user = 'admin'; ///Admin nutzername ändern
+$admin_password = 'foobar'; ///Admin Passwort ändern
 ?>
