@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Aug 2020 um 10:32
+-- Erstellungszeit: 31. Okt 2020 um 10:02
 -- Server-Version: 10.4.14-MariaDB
 -- PHP-Version: 7.4.9
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `test`
+-- Datenbank: `support`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE `aurum_info` (
 
 INSERT INTO `aurum_info` (`ID`, `info`) VALUES
 (1, 'aurum infinity'),
-(23, 'Diese Webseite verwendet Cookies um die richtige Nutzung zu gewährleisten.');
+(23, 'Diese Webseite verwendet Cookies, um die richtige Nutzung zu gewährleisten.');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `domain_config` (
 --
 
 INSERT INTO `domain_config` (`ID`, `domain_path`, `description`) VALUES
-(1, 'http://localhost/aurum-helpdesk/', 'domain'),
+(1, 'http://localhost/support/', 'domain'),
 (2, '', 'tidio'),
 (3, 'https://aurum-helpdesk.com/datenschutz', 'datenschutz'),
 (4, 'https://aurum-helpdesk.com/impressum', 'impressum'),
@@ -141,16 +141,6 @@ CREATE TABLE `mail_cache` (
   `pin` text NOT NULL,
   `date` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Daten für Tabelle `mail_cache`
---
-
-INSERT INTO `mail_cache` (`ID`, `text`, `pin`, `date`) VALUES
-(27, '<h1>Aufhebung der Sperre von blabla</h1> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>blabla\r\n                                                                                        <br>Grund der Sperre:<br> sadasd\r\n                                                                                        <br>Ort der Sperre:<br>ssss\r\n                                                                                        <br>Datum:<br>22.08.2020\r\n                                                                                        <br>\r\n                                                                                        <br>Text des Nutzers:<br>asdadsads', '901118', '22-08-2020 10:57:16'),
-(28, '<h1>Aufhebung der Sperre von blabla</h1> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>blabla\r\n                                                                                        <br>Grund der Sperre:<br> sadasd\r\n                                                                                        <br>Ort der Sperre:<br>ssss\r\n                                                                                        <br>Datum:<br>22.08.2020\r\n                                                                                        <br>\r\n                                                                                        <br>Text des Nutzers:<br>asdadsads', '098255', '22-08-2020 10:57:29'),
-(29, '<h1>Bugreport ssss</h1> \r\n                                                                                            Mail: chrischivlog@gmail.com\r\n                                                                                            <br>Name:<br>sfd\r\n                                                                                            <br>Beschreibung:<br> fsdsdfdsf\r\n                                                                                            <br>Weitere Anhänge oder Links:<br>sdfsfd', '224527', '22-08-2020 11:33:25'),
-(30, '<b>Bewerbung als Supporter</b> \r\n                                                                                        Mail: chrischivlog@gmail.com\r\n                                                                                        <br>Name:<br>sadasdasd\r\n                                                                                        <br>Stell dich kurz vor:<br> sasaas\r\n                                                                                        <br>Warum willst du dich bei uns bewerben?<br>asas  \r\n                                                                                        <br>Anmerkungen zu deiner Bewerbung:<br>', '517611', '23-08-2020 13:07:07');
 
 -- --------------------------------------------------------
 
