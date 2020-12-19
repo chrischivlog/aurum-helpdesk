@@ -1,3 +1,7 @@
+
+![Kitten](https://cdn.discordapp.com/attachments/763089233229250600/789940965027610644/Screenshot_1.png)
+
+
 # Aurum Helpdesk
 
 **Inhaltsverzeichniss**
@@ -36,7 +40,8 @@ $admin_password = 'foobar'; ///Admin Passwort ändern
 ?>
 ```
 
-[========]
+
+****
 
 Mehr hilfe bekommen sie im Admin-Panel oder auf meinem unten Verlinkten Discord-Server.
 
