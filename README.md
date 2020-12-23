@@ -1,5 +1,5 @@
 
-![Kitten](https://cdn.discordapp.com/attachments/763089233229250600/789940965027610644/Screenshot_1.png)
+![Kitten](https://media.discordapp.net/attachments/763089233229250600/791304482461974598/Screenshot_3.png?width=851&height=537)
 
 
 # Aurum Helpdesk
