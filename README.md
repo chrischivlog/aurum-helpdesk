@@ -45,6 +45,6 @@ $admin_password = 'foobar'; ///Admin Passwort ändern
 
 Mehr hilfe bekommen sie im Admin-Panel oder auf meinem unten Verlinkten Discord-Server.
 
-[![Discord](https://discordapp.com/api/guilds/308571324152807424/embed.png?style=banner2 "Discord")](https://discord.gg/wNbfWJwtPG "Discord")
+[![Discord](https://discordapp.com/api/guilds/308571324152807424/embed.png?style=banner2 "Discord")](https://discord.gg/yRw2Qh7 "Discord")
 
 
